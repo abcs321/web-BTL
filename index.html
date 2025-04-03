@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .menu-container {
+            background-color: #e0f7fa;
+            padding: 15px;
+            text-align: right;
+        }
+        .menu-item {
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .menu-item a {
+            text-decoration: none;
+            color: #00796b;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .menu-item a:hover {
+            background-color: #b2ebf2;
+        }
+        .equal-size {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+        .why-choose-us {
+            background: #cceeff;
+            padding: 20px;
+            text-align: center;
+        }
+        .benefits {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 15px;
+        }
+        .benefit-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            background-color: #2196F3;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .icon img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+        .cat-icon {
+            background-color: #2196F3;
+        }
+        .section-heading {
+            padding: 20px;
+        }
+        .section-heading h2 {
+            margin-bottom: 10px;
+        }
+        .section-heading a {
+            text-decoration: none;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 0 20px;
+        }
+        .grid-item {
+            background-color: #ddd;
+            height: 150px;
+            position: relative;
+            overflow: hidden;
+        }
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .grid-item:hover .overlay {
+            opacity: 1;
+        }
+        .overlay-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .overlay-description {
+            font-size: 0.9em;
+            padding: 0 10px;
+            text-align: center;
+        }
+        .grid-container-small {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 0 20px;
+            margin-top: 20px;
+        }
+        .grid-item-small {
+    background-color: #ddd;
+    height: 150px; /* Tăng chiều cao từ 100px lên 150px */
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+        .grid-item-small .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .grid-item-small:hover .overlay {
+            opacity: 1;
+        }
+        .grid-container-large {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 0 20px;
+            margin-top: 20px;
+        }
+        .grid-item-large {
+            background-color: #ddd;
+            height: 120px;
+        }
+        .grid-item-large h3 {
+            font-size: 1em;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .grid-item-large p {
+            font-size: 0.8em;
+            color: #777;
+        }
+        .read-more {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.8em;
+            color: #00796b;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-item"><a href="#">Trang chủ</a></div>
+        <div class="menu-item"><a href="#">Giới thiệu</a></div>
+        <div class="menu-item"><a href="#">Tour</a></div>
+        <div class="menu-item"><a href="#">Tin tức</a></div>
+        <div class="menu-item"><a href="#">Liên hệ</a></div>
+    </div>
+
+    <div style="padding: 20px;">
+        <h2>Giới thiệu</h2>
+        <p>Hồ Tây là một trong những thắng cảnh đẹp nổi tiếng ở thủ đô Hà Nội, nơi có nhiều di tích lịch sử văn hóa gắn liền với lịch sử hình thành, phát triển của Kinh thành Thăng Long xưa và Hà Nội ngày nay. Vẻ đẹp của Hồ Tây là một nét chấm phá lãng mạn, thi vị trong bức tranh đầy màu sắc của Hà Nội, nơi gặp gỡ, ghi dấu kỷ niệm của biết bao người Hà Nội, nơi níu chân du khách mỗi lần đến thăm thủ đô.</p>
+        <p><a href="#" style="display: inline-block; background-color: #00bcd4; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px;">Tìm hiểu ngay</a></p>
+    </div>
+
+    <div class="why-choose-us">
+        <h2>Vì sao chọn chúng tôi</h2>
+        <div class="benefits">
+            <div class="benefit-item">
+                <div class="icon"></div>
+                <p>Chi phí tối ưu</p>
+            </div>
+            <div class="benefit-item">
+                <div class="icon"></div>
+                <p>Booking dễ dàng</p>
+            </div>
+            <div class="benefit-item">
+                <div class="icon cat-icon">
+                    <img src="img/cat.png" alt="Có mèo">
+                </div>
+                <p>Có mèo</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding: 20px;">
+        <h2>Cùng du lịch với chúng tôi</h2>
+        <div style="display: flex; justify-content: space-around; margin-top: 20px;">
+            <div style="text-align: center;">
+                <img src="https://static.thenounproject.com/png/1588577-200.png" alt="Địa điểm" class="equal-size">
+                <p>Đi đến nơi bạn muốn đến</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHCddTDIhXn26PEKqSROSQuAC1SRjD55tVWw&s" alt="Đặt vé" class="equal-size">
+                <p>Đặt vé</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="https://www.kindpng.com/picc/m/111-1117342_mode-of-payment-icon-png-transparent-png.png" alt="Thanh toán" class="equal-size">
+                <p>Thanh toán</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-heading">
+        <h2>Địa điểm yêu thích</h2>
+        <a href="#">Xem thêm →</a>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQcZHDNMVQ70Y7nA9baMizg1Db2gTkQDnGJA&s" alt="Hà Nội">
+                <div class="overlay">
+                    <h3 class="overlay-title">Hà Nội</h3>
+                    <p class="overlay-description">Thủ đô ngàn năm văn hiến với những con phố cổ kính.</p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="https://www.dulichhalong.net/images/Vinh-Ha-Long.jpg" alt="Vịnh Hạ Long">
+                <div class="overlay">
+                    <h3 class="overlay-title">Vịnh Hạ Long</h3>
+                    <p class="overlay-description">Di sản thiên nhiên thế giới với hàng ngàn đảo đá vôi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-heading">
+        <h2>Âm thực địa phương</h2>
+        <a href="#">Xem thêm →</a>
+        <div class="grid-container-small">
+            <div class="grid-item-small">
+                <img src="https://i.ytimg.com/vi/99tOr7JSr0k/maxresdefault.jpg" alt="Phở">
+                <div class="overlay">
+                    <h3 class="overlay-title">Phở</h3>
+                    <p class="overlay-description">Món ăn truyền thống của Việt Nam.</p>
+                </div>
+            </div>
+            <div class="grid-item-small">
+                <img src="https://www.halongbaycruise.vn/duthuyen/halongbay-images/news/photo/hau-nuong-dac-san-ha-long.jpg" alt="hàu">
+                <div class="overlay">
+                    <h3 class="overlay-title">hàu</h3>
+                    <p class="overlay-description">đặc sản hạ long</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-heading">
+        <h2>Dịch vụ du lịch</h2>
+        <a href="#">Xem thêm →</a>
+        <div class="grid-container-large">
+            <div class="grid-item-large">
+                <h3>Scaling Your Site</h3>
+                <p>Learn how to scale your site for unexpected traffic spikes.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="grid-item-large">
+                <h3>Optimize for SEO</h3>
+                <p>Follow these tips to optimize your site for search engines.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="grid-item-large">
+                <h3>CMS Examples</h3>
+                <p>Explore different CMS examples to see what's possible.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
