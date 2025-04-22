@@ -1,312 +1,517 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Web</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .menu-container {
-            background-color: #e0f7fa;
-            padding: 15px;
-            text-align: right;
-        }
-        .menu-item {
-            display: inline-block;
-            margin-left: 20px;
-        }
-        .menu-item a {
-            text-decoration: none;
-            color: #00796b;
-            font-weight: bold;
-            padding: 8px 12px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .menu-item a:hover {
-            background-color: #b2ebf2;
-        }
-        .equal-size {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-        }
-        .why-choose-us {
-            background: #cceeff;
-            padding: 20px;
-            text-align: center;
-        }
-        .benefits {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 15px;
-        }
-        .benefit-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .icon {
-            width: 50px;
-            height: 50px;
-            background-color: #2196F3;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .icon img {
-            width: 30px;
-            height: 30px;
-            object-fit: contain;
-        }
-        .cat-icon {
-            background-color: #2196F3;
-        }
-        .section-heading {
-            padding: 20px;
-        }
-        .section-heading h2 {
-            margin-bottom: 10px;
-        }
-        .section-heading a {
-            text-decoration: none;
-        }
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            padding: 0 20px;
-        }
-        .grid-item {
-            background-color: #ddd;
-            height: 150px;
-            position: relative;
-            overflow: hidden;
-        }
-        .grid-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .grid-item:hover .overlay {
-            opacity: 1;
-        }
-        .overlay-title {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-        .overlay-description {
-            font-size: 0.9em;
-            padding: 0 10px;
-            text-align: center;
-        }
-        .grid-container-small {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            padding: 0 20px;
-            margin-top: 20px;
-        }
-        .grid-item-small {
-    background-color: #ddd;
-    height: 150px; /* Tăng chiều cao từ 100px lên 150px */
-    position: relative;
-    overflow: hidden;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khám Phá Hà Nội</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  background-color: #f4f4f4;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.header-text {
+  z-index: 2;
+  width: 50%;
 }
 
-.grid-item-small img {
+.header-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+}
+
+.header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+    .btn {
+      background: #d4a373;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    .section {
+      padding: 50px;
+    }
+    .rooms, .services {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .room, .service {
+      flex: 1;
+      min-width: 250px;
+    }
+    .info-bar {
+      display: flex;
+      justify-content: space-around;
+      background: #eee;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .info-bar div {
+      flex: 1;
+    }
+    .card {
+      background: #fff;
+      padding: 40px;
+      max-width: 600px;
+      box-sizing: border-box;
+    }
+    .room img {
+      width: 369px;
+      height: 369px;
+      object-fit: cover;
+    }
+    .services {
+      align-items: center;
+    }
+    .service img {
+      width: 624px;
+      height: 598px;
+      object-fit: cover;
+      display: block;
+    }
+    .service {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+    }
+    .section.services {
+      padding: 80px 0;
+    }
+    .feature {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.feature-image img {
+  width: 720px;
+  height: 454px;
+  object-fit: cover;
+}
+.feature-content {
+  flex: 1;
+}
+.feature-content h3 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.feature-content p {
+  margin-bottom: 20px;
+}
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 40px 20px;
+  font-size: 0.9em;
+}
+
+.footer-contact {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.footer-contact h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.footer-contact p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.contact-details i {
+  margin-right: 10px;
+  font-size: 1.1em;
+  color: #f39c12;
+}
+
+.newsletter-form {
+  margin-top: 20px;
+}
+
+.newsletter-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: #333;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.footer-column {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+.footer-column ul li a {
+  color: #eee;
+  text-decoration: none;
+}
+.footer-column ul li a:hover {
+  color: #f39c12;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.social-links a {
+  color: #eee;
+  font-size: 1.2em;
+  margin-left: 15px;
+  text-decoration: none;
+}
+.social-links a:hover {
+  color: #f39c12;
+}
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-column {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  .social-links {
+    margin-top: 15px;
+  }
+}
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 0.9em;
+}
+.footer-gallery {
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+}
+.footer-gallery h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #eee;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+.gallery-item {
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.3s ease-in-out;
+}
+.gallery-item img:hover {
+    transform: scale(1.03);
+}
+.gallery-item-1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+.gallery-item-2 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+.gallery-item-3 {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
 }
 
-        .grid-item-small .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .grid-item-small:hover .overlay {
-            opacity: 1;
-        }
-        .grid-container-large {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 0 20px;
-            margin-top: 20px;
-        }
-        .grid-item-large {
-            background-color: #ddd;
-            height: 120px;
-        }
-        .grid-item-large h3 {
-            font-size: 1em;
-            margin-top: 10px;
-            margin-bottom: 5px;
-        }
-        .grid-item-large p {
-            font-size: 0.8em;
-            color: #777;
-        }
-        .read-more {
-            display: block;
-            margin-top: 10px;
-            font-size: 0.8em;
-            color: #00796b;
-            text-decoration: none;
-        }
-    </style>
+.gallery-item-4 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.gallery-item-5 {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+.gallery-item-6 {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+}
+.view-more-button {
+    padding: 8px 15px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+.view-more-button:hover {
+    background-color: #e08e0b;
+}
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto;
+    }
+    .gallery-item-1, .gallery-item-2, .gallery-item-3,
+    .gallery-item-4, .gallery-item-5, .gallery-item-6 {
+        grid-column: span 1;
+        grid-row: auto;
+    }
+}
+  </style>
 </head>
 <body>
-    <div class="menu-container">
-        <div class="menu-item"><a href="#">Trang chủ</a></div>
-        <div class="menu-item"><a href="#">Giới thiệu</a></div>
-        <div class="menu-item"><a href="#">Tour</a></div>
-        <div class="menu-item"><a href="#">Tin tức</a></div>
-        <div class="menu-item"><a href="#">Liên hệ</a></div>
+  <header>
+    <div class="header-text">
+      <h1>KHÁM PHÁ NHỮNG DANH LAM HÀ NỘI</h1>
+      <p>Chùa Một Cột có tên ban đầu là Liên Hoa Đài (蓮花臺) tức là Đài Hoa Sen với lối kiến trúc độc đáo: một điện thờ đặt trên một cột trụ duy nhất. Liên Hoa Đài là công trình nổi tiếng nhất nằm trong quần thể kiến trúc Chùa Diên Hựu (延祐寺), có nghĩa là ngôi chùa "Phúc lành dài lâu". Công trình Chùa Diên Hựu nguyên bản được xây vào thời vua Lý Thái Tông mùa đông năm 1049 và hoàn thiện vào năm 1105 thời vua Lý Nhân Tông nay đã không còn. Công trình Liên Hoa Đài hiện tại nằm ở Hà Nội là một phiên bản được chỉnh sửa nhiều lần qua các thời kỳ, bị Pháp phá huỷ khi rút khỏi Hà Nội ngày 11/9/1954 và được dựng lại năm 1955 bởi kiến trúc sư Nguyễn Bá Lăng theo kiến trúc để lại từ thời Nguyễn. Đây là ngôi chùa có kiến trúc độc đáo ở Việt Nam.</p>
+      <button class="btn">Khám phá</button>
+    </div>
+    <div class="header-image">
+      <img src="https://eggyolk.vn/wp-content/uploads/2024/05/kinh-nghiem-du-lich-chua-mot-cot.jpg" alt="Chùa Một Cột">
+    </div>
+  </header>
+  <section class="section">
+    <div class="features">
+      <div class="feature">
+        <div class="feature-image">
+          <img src="https://dulich3mien.vn/wp-content/uploads/2022/02/THAP-BUT-02-min.jpg" alt="Công trình nổi tiếng">
+        </div>
+        <div class="feature-content">
+          <h3>VÀ NHỮNG CÔNG TRÌNH NỔI TIẾNG</h3>
+          <p>Khám phá những biểu tượng văn hoá lịch sử đặc sắc của Hà Nội – từ Tháp Bút, Văn Miếu cho đến Hồ Gươm.</p>
+          <button class="btn">Tìm hiểu thêm</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <h2>Các dịch vụ khác của chúng tôi</h2>
+    <div class="rooms">
+      <div class="room">
+        <img src="https://www.desyloia.com/wp-content/uploads/2022/05/desyloia-hotel-Superior-Balcony-052-1440px-1024x768.jpg" alt="Phòng cao cấp">
+        <h3>PHÒNG CAO CẤP</h3>
+      </div>
+      <div class="room">
+        <img src="https://www.desyloia.com/wp-content/uploads/2022/05/desyloia-hotel-Superior-Balcony-052-1440px-1024x768.jpg" alt="Phòng thường">
+        <h3>PHÒNG THƯỜNG</h3>
+      </div>
+      <div class="room">
+        <img src="https://www.desyloia.com/wp-content/uploads/2022/05/desyloia-hotel-Superior-Balcony-052-1440px-1024x768.jpg" alt="Phòng tổng thống">
+        <h3>PHÒNG TỔNG THỐNG</h3>
+      </div>
+    </div>
+  </section>
+  <section class="section services">
+    <div class="service">
+      <div class="card">
+        <h3>NHÀ HÀNG CAO CẤP</h3>
+        <p>Là điểm đến lý tưởng dành cho những ai yêu thích ẩm thực chất lượng trong một không gian ấm cúng và tinh tế. Với sứ mệnh mang đến trải 
+        nghiệm ẩm thực trọn vẹn, chúng tôi kết hợp giữa hương vị đặc sắc, nguyên liệu tươi ngon và phong cách phục vụ chuyên nghiệp.Thực đơn đa 
+        dạng, được chế biến bởi đội ngũ đầu bếp giàu kinh nghiệm, mang đến sự giao thoa hài hòa giữa truyền thống và hiện đại. Dù là một bữa ăn 
+        thân mật cùng gia đình, buổi hẹn hò lãng mạn hay tiếp đón đối tác, Nhà hàng của chúng tôi luôn là sự lựa chọn hoàn hảo.Chúng tôi không 
+        chỉ phục vụ món ăn – chúng tôi tạo nên những khoảnh khắc đáng nhớ.</p>
+        <button class="btn">Learn More</button>
+      </div>
+    </div>
+    <div class="service">
+      <img src="https://hanoihotel.com.vn/wp-content/uploads/2024/11/Ban-sao-cua-Golden-Dragon-Restaurant-2-scaled.webp" alt="Nhà hàng">
+    </div>
+  </section>
+  <section class="section services">
+    <div class="service">
+      <img src="https://finterior.com.vn/wp-content/uploads/2024/08/thiet-ke-thi-cong-spa-resort.jpg" alt="Spa">
+    </div>
+    <div class="service">
+      <div class="card">
+        <h3>SPA YÊN TĨNH</h3>
+        <p>Với đội ngũ chuyên viên được đào tạo bài bản, kết hợp cùng những liệu trình trị liệu chuẩn quốc tế và sản phẩm chăm sóc cao cấp, 
+        chúng tôi mang đến cho quý khách những trải nghiệm spa đẳng cấp – nơi mỗi giác quan đều được nâng niu, mỗi phút giây đều là sự thư 
+        giãn tuyệt đối.Dù bạn tìm kiếm một liệu trình chăm sóc da chuyên sâu, massage trị liệu hay đơn giản là những phút giây nghỉ ngơi khỏi nhịp 
+        sống bận rộn, Chúng tôi luôn sẵn sàng đồng hành cùng bạn trên hành trình làm đẹp và chăm sóc sức khỏe.</p>
+        <button class="btn">Tìm hiểu thêm</button>
+      </div>
+    </div>
+  </section>
+  <section class="section services">
+    <div class="service">
+      <div class="card">
+        <h3>BỂ BƠI NGOÀI TRỜI</h3>
+        <p>Với thiết kế hiện đại, đường nét tinh tế cùng làn nước trong xanh được chăm sóc theo tiêu chuẩn nghiêm ngặt, bể bơi mang đến cảm giác 
+        trong trẻo và sảng khoái ngay từ những bước chân đầu tiên. Bao quanh là hàng ghế tắm nắng, khu lounge thư giãn và quầy bar phục vụ đồ 
+        uống mát lạnh, tạo nên một không gian nghỉ dưỡng hoàn hảo – nơi bạn có thể thả mình thư giãn, tận hưởng trọn vẹn từng khoảnh khắc.Dù là 
+        buổi sáng tinh khôi hay chiều hoàng hôn dịu nhẹ, bể bơi ngoài trời tại nơi đây luôn là lựa chọn lý tưởng cho một ngày thư giãn đúng nghĩa.</p>
+        <button class="btn">Tìm hiểu thêm</button>
+      </div>
+    </div>
+    <div class="service">
+      <img src="https://www.palacesaigon.com/wp-content/uploads/sites/27/2016/06/swimming-pool-1.jpg" alt="Bể bơi">
+    </div>
+  </section>
+  <footer>
+    <div class="footer-gallery">
+        <h2>Our Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item gallery-item-1">
+                <img src="https://cdn.thuvienphapluat.vn/uploads/tintuc/2024/01/06/thanh-pho-ha-noi.jpg" alt="Gallery Image 1">
+            </div>
+            <div class="gallery-item gallery-item-2">
+                <img src="https://www.homepaylater.vn/static/c385e533c4ae6fd0082321567fe11053/9d72c/1_ho_hoan_kiem_nam_ngay_trung_tam_ha_noi_va_la_mot_bieu_tuong_cua_thanh_pho_2612ef4c2f.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-item gallery-item-3">
+                <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2024/01/dia-diem-du-lich-o-ha-noi-1.jpg" alt="Gallery Image 3">
+            </div>
+            <div class="gallery-item gallery-item-4">
+                <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2024/01/dia-diem-du-lich-o-ha-noi-1.jpg" alt="Gallery Image 4">
+            </div>
+            <div class="gallery-item gallery-item-5">
+                <img src="https://ntthnue.edu.vn/uploads/Images/2019/11/041.jpg" alt="Gallery Image 5">
+            </div>
+            <div class="gallery-item gallery-item-6">
+                <img src="https://phuotvivu.com/blog/wp-content/uploads/2021/06/H%E1%BB%93-g%C6%B0%C6%A1m-H%C3%A0-N%E1%BB%99i.jpg" alt="Gallery Image 6">
+            </div>
+        </div>
+        <button class="view-more-button">Xem Thêm</button>
     </div>
 
-    <div style="padding: 20px;">
-        <h2>Giới thiệu</h2>
-        <p>Hồ Tây là một trong những thắng cảnh đẹp nổi tiếng ở thủ đô Hà Nội, nơi có nhiều di tích lịch sử văn hóa gắn liền với lịch sử hình thành, phát triển của Kinh thành Thăng Long xưa và Hà Nội ngày nay. Vẻ đẹp của Hồ Tây là một nét chấm phá lãng mạn, thi vị trong bức tranh đầy màu sắc của Hà Nội, nơi gặp gỡ, ghi dấu kỷ niệm của biết bao người Hà Nội, nơi níu chân du khách mỗi lần đến thăm thủ đô.</p>
-        <p><a href="#" style="display: inline-block; background-color: #00bcd4; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px;">Tìm hiểu ngay</a></p>
-    </div>
-
-    <div class="why-choose-us">
-        <h2>Vì sao chọn chúng tôi</h2>
-        <div class="benefits">
-            <div class="benefit-item">
-                <div class="icon"></div>
-                <p>Chi phí tối ưu</p>
-            </div>
-            <div class="benefit-item">
-                <div class="icon"></div>
-                <p>Booking dễ dàng</p>
-            </div>
-            <div class="benefit-item">
-                <div class="icon cat-icon">
-                    <img src="img/cat.png" alt="Có mèo">
-                </div>
-                <p>Có mèo</p>
-            </div>
+    <div class="footer-contact">
+        <h3>LIÊN HỆ CHĂM SÓC KHÁCH HÀNG</h3>
+        <p>...</p>
+        <div class="newsletter-form">
+            <label for="email">Đăng ký nhận bản tin của chúng tôi:</label>
+            <input type="email" id="email" placeholder="Nhập địa chỉ email của bạn">
+            <button>Đăng ký</button>
         </div>
     </div>
 
-    <div style="padding: 20px;">
-        <h2>Cùng du lịch với chúng tôi</h2>
-        <div style="display: flex; justify-content: space-around; margin-top: 20px;">
-            <div style="text-align: center;">
-                <img src="https://static.thenounproject.com/png/1588577-200.png" alt="Địa điểm" class="equal-size">
-                <p>Đi đến nơi bạn muốn đến</p>
-            </div>
-            <div style="text-align: center;">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHCddTDIhXn26PEKqSROSQuAC1SRjD55tVWw&s" alt="Đặt vé" class="equal-size">
-                <p>Đặt vé</p>
-            </div>
-            <div style="text-align: center;">
-                <img src="https://www.kindpng.com/picc/m/111-1117342_mode-of-payment-icon-png-transparent-png.png" alt="Thanh toán" class="equal-size">
-                <p>Thanh toán</p>
-            </div>
+    <div class="footer-links">
+        <div class="footer-column">
+            <h4>Về Chúng Tôi</h4>
+            <ul>
+                <li><a href="#">Câu chuyện của chúng tôi</a></li>
+                <li><a href="#">Đội ngũ</a></li>
+                <li><a href="#">Tuyển dụng</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Dịch Vụ</h4>
+            <ul>
+                <li><a href="#">Phòng & Suites</a></li>
+                <li><a href="#">Nhà hàng</a></li>
+                <li><a href="#">Spa & Wellness</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Hỗ Trợ</h4>
+            <ul>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Chính sách bảo mật</a></li>
+            </ul>
         </div>
     </div>
 
-    <div class="section-heading">
-        <h2>Địa điểm yêu thích</h2>
-        <a href="#">Xem thêm →</a>
-        <div class="grid-container">
-            <div class="grid-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQcZHDNMVQ70Y7nA9baMizg1Db2gTkQDnGJA&s" alt="Hà Nội">
-                <div class="overlay">
-                    <h3 class="overlay-title">Hà Nội</h3>
-                    <p class="overlay-description">Thủ đô ngàn năm văn hiến với những con phố cổ kính.</p>
-                </div>
-            </div>
-            <div class="grid-item">
-                <img src="https://www.dulichhalong.net/images/Vinh-Ha-Long.jpg" alt="Vịnh Hạ Long">
-                <div class="overlay">
-                    <h3 class="overlay-title">Vịnh Hạ Long</h3>
-                    <p class="overlay-description">Di sản thiên nhiên thế giới với hàng ngàn đảo đá vôi.</p>
-                </div>
-            </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 LADY HUNTER HOTEL. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
-
-    <div class="section-heading">
-        <h2>Âm thực địa phương</h2>
-        <a href="#">Xem thêm →</a>
-        <div class="grid-container-small">
-            <div class="grid-item-small">
-                <img src="https://i.ytimg.com/vi/99tOr7JSr0k/maxresdefault.jpg" alt="Phở">
-                <div class="overlay">
-                    <h3 class="overlay-title">Phở</h3>
-                    <p class="overlay-description">Món ăn truyền thống của Việt Nam.</p>
-                </div>
-            </div>
-            <div class="grid-item-small">
-                <img src="https://www.halongbaycruise.vn/duthuyen/halongbay-images/news/photo/hau-nuong-dac-san-ha-long.jpg" alt="hàu">
-                <div class="overlay">
-                    <h3 class="overlay-title">hàu</h3>
-                    <p class="overlay-description">đặc sản hạ long</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section-heading">
-        <h2>Dịch vụ du lịch</h2>
-        <a href="#">Xem thêm →</a>
-        <div class="grid-container-large">
-            <div class="grid-item-large">
-                <h3>TEST</h3>
-                <p>TEST</p>
-                <a href="#" class="read-more">Read More</a>
-            </div>
-            <div class="grid-item-large">
-                <h3>TEST</h3>
-                <p>TEST</p>
-                <a href="#" class="read-more">Read More</a>
-            </div>
-            <div class="grid-item-large">
-                <h3>TEST</h3>
-                <p>TEST</p>
-                <a href="#" class="read-more">Read More</a>
-            </div>
-        </div>
-    </div>
+</footer>
 </body>
 </html>
