@@ -352,9 +352,58 @@ footer {
         grid-row: auto;
     }
 }
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.top-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.top-nav ul li {
+    margin-right: 20px;
+}
+.top-nav ul li:last-child {
+    margin-right: 0;
+}
+.top-nav a {
+    text-decoration: none;
+    color: #080707;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+.top-nav a:hover {
+    background-color: rgba(2, 2, 2, 0.1);
+}
+.destination-button a {
+    background-color: #f89406;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.destination-button a:hover {
+    background-color: #e08705;
+}
   </style>
 </head>
 <body>
+  <nav class="top-nav">
+    <ul>
+        <li><a href="https://abcs321.github.io/BTL-MENU/">Home</a></li>
+        <li><a href="https://abcs321.github.io/web-BTL/">Room & Suites</a></li>
+        <li><a href="https://abcs321.github.io/web-BTL/">Restaurant & Bar</a></li>
+    </ul>
+    <div class="destination-button">
+        <a href="https://truongminh3010.github.io/btl/">ĐẶT VÉ</a>
+    </div>
+</nav>
   <header>
     <div class="header-text">
       <h1>KHÁM PHÁ NHỮNG DANH LAM HÀ NỘI</h1>
