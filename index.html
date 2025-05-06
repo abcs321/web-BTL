@@ -4,7 +4,8 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <title>Khám Phá Hà Nội</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -392,6 +393,16 @@ footer {
 .destination-button a:hover {
     background-color: #e08705;
 }
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnim 1s forwards;
+  }
+
+  @keyframes fadeInAnim {
+    to {
+      opacity: 1;
+    }
+  }
   </style>
 </head>
 <body>
@@ -406,19 +417,19 @@ footer {
     </div>
 </nav>
   <header>
-    <div class="header-text">
+    <div class="header-text" >
       <h1>KHÁM PHÁ NHỮNG DANH LAM HÀ NỘI</h1>
       <p>Chùa Một Cột có tên ban đầu là Liên Hoa Đài (蓮花臺) tức là Đài Hoa Sen với lối kiến trúc độc đáo: một điện thờ đặt trên một cột trụ duy nhất. Liên Hoa Đài là công trình nổi tiếng nhất nằm trong quần thể kiến trúc Chùa Diên Hựu (延祐寺), có nghĩa là ngôi chùa "Phúc lành dài lâu". Công trình Chùa Diên Hựu nguyên bản được xây vào thời vua Lý Thái Tông mùa đông năm 1049 và hoàn thiện vào năm 1105 thời vua Lý Nhân Tông nay đã không còn. Công trình Liên Hoa Đài hiện tại nằm ở Hà Nội là một phiên bản được chỉnh sửa nhiều lần qua các thời kỳ, bị Pháp phá huỷ khi rút khỏi Hà Nội ngày 11/9/1954 và được dựng lại năm 1955 bởi kiến trúc sư Nguyễn Bá Lăng theo kiến trúc để lại từ thời Nguyễn. Đây là ngôi chùa có kiến trúc độc đáo ở Việt Nam.</p>
       <button class="btn" onclick="nuke()">Khám phá</button>
     </div>
-    <div class="header-image">
+    <div class="header-image fade-in">
       <img src="https://eggyolk.vn/wp-content/uploads/2024/05/kinh-nghiem-du-lich-chua-mot-cot.jpg" alt="Chùa Một Cột">
     </div>
   </header>
   <section class="section">
     <div class="features">
       <div class="feature">
-        <div class="feature-image">
+        <div class="feature-image fade-in" style="animation-delay: 0.75s">
           <img src="https://dulich3mien.vn/wp-content/uploads/2022/02/THAP-BUT-02-min.jpg" alt="Công trình nổi tiếng">
         </div>
         <div class="feature-content">
@@ -432,17 +443,17 @@ footer {
   <section class="section">
     <h2>Các dịch vụ khác của chúng tôi</h2>
     <div class="rooms">
-      <div class="room">
+      <div class="room fade-in" style="animation-delay: 1.25s">
         <img src="https://i0.wp.com/theluxurytravelexpert.com/wp-content/uploads/2014/03/trump-hotel-chicago-illinois-usa.jpg" alt="Phòng thường">
         <h3>PHÒNG CAO CẤP</h3>
         <a href="https://truongminh3010.github.io/btl/"><button class="btn">ĐẶT PHÒNG</button></a>
       </div>
-      <div class="room">
+      <div class="room fade-in" style="animation-delay: 1.25s">
         <img src="https://www.desyloia.com/wp-content/uploads/2022/05/desyloia-hotel-Superior-Balcony-052-1440px-1024x768.jpg" alt="Phòng cao cấp">
         <h3>PHÒNG THƯỜNG</h3>
-        <a href="https://truongminh3010.github.io/btl/"><button class="btn">ĐẶT PHÒNG</button></a>
+        <a href="https://truongminh3010.github.io/btl/" style="animation-delay: 1.25s"><button class="btn">ĐẶT PHÒNG</button></a>
       </div>
-      <div class="room">
+      <div class="room fade-in" style="animation-delay: 1.25s">
         <img src="https://www.redrockresort.com/wp-content/uploads/2020/12/RR-Standard-2-Queen.jpg" alt="Phòng tổng thống">
         <h3>PHÒNG TỔNG THỐNG</h3>
         <a href="https://truongminh3010.github.io/btl/"><button class="btn">ĐẶT PHÒNG</button></a>
@@ -451,7 +462,7 @@ footer {
   </section>
   <section class="section services">
     <div class="service">
-      <div class="card">
+      <div class="card ">
         <h3>NHÀ HÀNG CAO CẤP</h3>
         <p>Là điểm đến lý tưởng dành cho những ai yêu thích ẩm thực chất lượng trong một không gian ấm cúng và tinh tế. Với sứ mệnh mang đến trải 
         nghiệm ẩm thực trọn vẹn, chúng tôi kết hợp giữa hương vị đặc sắc, nguyên liệu tươi ngon và phong cách phục vụ chuyên nghiệp.Thực đơn đa 
@@ -461,13 +472,13 @@ footer {
         <a href="https://hung-qwerty.github.io/monan/"><button class="btn">Tìm hiểu thêm</button></a>
       </div>
     </div>
-    <div class="service">
+    <div class="service fade-in" style="animation-delay: 2s">
       <img src="https://hanoihotel.com.vn/wp-content/uploads/2024/11/Ban-sao-cua-Golden-Dragon-Restaurant-2-scaled.webp" alt="Nhà hàng">
     </div>
   </section>
   <section class="section services">
-    <div class="service">
-      <img src="https://gblimousine.net/wp-content/uploads/2023/03/S__10945410.jpg" alt="Spa">
+    <div class="service fade-in" style="animation-delay: 2.5s">
+      <img src="https://gblimousine.net/wp-content/uploads/2023/03/S__10945410.jpg" alt="xe">
     </div>
     <div class="service">
       <div class="card">
@@ -492,8 +503,8 @@ footer {
         <a href="https://abcs321.github.io/BTL-MENU/"><button class="btn">Tìm hiểu thêm</button></a>
       </div>
     </div>
-    <div class="service">
-      <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2024/01/dia-diem-du-lich-o-ha-noi-1.jpg" alt="Nhà hàng">
+    <div class="service fade-in" style="animation-delay: 3s">
+      <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2024/01/dia-diem-du-lich-o-ha-noi-1.jpg" alt="ha noi">
     </div>
   </section>
   <footer>
