@@ -403,12 +403,18 @@ footer {
       opacity: 1;
     }
   }
+  .big-font {
+    font-family: 'Lora';
+}
+.font {
+    font-family: 'Mulish';font-size: 22px;
+}
   </style>
 </head>
 <body>
   <nav class="top-nav">
     <ul>
-        <li><a href="https://abcs321.github.io/BTL-MENU/">Home</a></li>
+        <li><a onclick="nuke()">Home</a></li>
         <li><a href="https://abcs321.github.io/web-BTL/">Room & Suites</a></li>
         <li><a href="https://hung-qwerty.github.io/monan/">Restaurant & Bar</a></li>
     </ul>
@@ -418,9 +424,9 @@ footer {
 </nav>
   <header>
     <div class="header-text" >
-      <h1>KHÁM PHÁ NHỮNG DANH LAM HÀ NỘI</h1>
-      <p>Chùa Một Cột có tên ban đầu là Liên Hoa Đài (蓮花臺) tức là Đài Hoa Sen với lối kiến trúc độc đáo: một điện thờ đặt trên một cột trụ duy nhất. Liên Hoa Đài là công trình nổi tiếng nhất nằm trong quần thể kiến trúc Chùa Diên Hựu (延祐寺), có nghĩa là ngôi chùa "Phúc lành dài lâu". Công trình Chùa Diên Hựu nguyên bản được xây vào thời vua Lý Thái Tông mùa đông năm 1049 và hoàn thiện vào năm 1105 thời vua Lý Nhân Tông nay đã không còn. Công trình Liên Hoa Đài hiện tại nằm ở Hà Nội là một phiên bản được chỉnh sửa nhiều lần qua các thời kỳ, bị Pháp phá huỷ khi rút khỏi Hà Nội ngày 11/9/1954 và được dựng lại năm 1955 bởi kiến trúc sư Nguyễn Bá Lăng theo kiến trúc để lại từ thời Nguyễn. Đây là ngôi chùa có kiến trúc độc đáo ở Việt Nam.</p>
-      <button class="btn" onclick="nuke()">Khám phá</button>
+      <h1 class="big-font">KHÁM PHÁ NHỮNG DANH LAM HÀ NỘI</h1>
+      <p class="big-font">Chùa Một Cột có tên ban đầu là Liên Hoa Đài (蓮花臺) tức là Đài Hoa Sen với lối kiến trúc độc đáo: một điện thờ đặt trên một cột trụ duy nhất. Liên Hoa Đài là công trình nổi tiếng nhất nằm trong quần thể kiến trúc Chùa Diên Hựu (延祐寺), có nghĩa là ngôi chùa "Phúc lành dài lâu". Công trình Chùa Diên Hựu nguyên bản được xây vào thời vua Lý Thái Tông mùa đông năm 1049 và hoàn thiện vào năm 1105 thời vua Lý Nhân Tông nay đã không còn. Công trình Liên Hoa Đài hiện tại nằm ở Hà Nội là một phiên bản được chỉnh sửa nhiều lần qua các thời kỳ, bị Pháp phá huỷ khi rút khỏi Hà Nội ngày 11/9/1954 và được dựng lại năm 1955 bởi kiến trúc sư Nguyễn Bá Lăng theo kiến trúc để lại từ thời Nguyễn. Đây là ngôi chùa có kiến trúc độc đáo ở Việt Nam.</p>
+      <a href="main menu.html"><button class="btn">Khám phá</button></a>
     </div>
     <div class="header-image fade-in">
       <img src="https://eggyolk.vn/wp-content/uploads/2024/05/kinh-nghiem-du-lich-chua-mot-cot.jpg" alt="Chùa Một Cột">
@@ -432,44 +438,64 @@ footer {
         <div class="feature-image fade-in" style="animation-delay: 0.75s">
           <img src="https://dulich3mien.vn/wp-content/uploads/2022/02/THAP-BUT-02-min.jpg" alt="Công trình nổi tiếng">
         </div>
-        <div class="feature-content">
-          <h3>VÀ NHỮNG CÔNG TRÌNH NỔI TIẾNG</h3>
-          <p>Khám phá những biểu tượng văn hoá lịch sử đặc sắc của Hà Nội – từ Tháp Bút, Văn Miếu cho đến Hồ Gươm.</p>
-          <button class="btn">Tìm hiểu thêm</button>
+        <div class="feature-content big-font">
+          <h3 class="big-font">VÀ NHỮNG CÔNG TRÌNH NỔI TIẾNG</h3>
+          <p class="big-font">Khám phá những biểu tượng văn hoá lịch sử đặc sắc của Hà Nội – từ Tháp Bút, Văn Miếu cho đến Hồ Gươm.</p>
+          <a href="main menu.html"><button class="btn">Khám phá</button></a>
         </div>
       </div>
     </div>
   </section>
   <section class="section">
-    <h2>Các dịch vụ khác của chúng tôi</h2>
+    <h2 class="big-font" style="font-size: 39px;">KHÁCH SẠN</h2>
     <div class="rooms">
       <div class="room fade-in" style="animation-delay: 1.25s">
         <img src="https://i0.wp.com/theluxurytravelexpert.com/wp-content/uploads/2014/03/trump-hotel-chicago-illinois-usa.jpg" alt="Phòng thường">
-        <h3>PHÒNG CAO CẤP</h3>
+        <h3 class="big-font">PHÒNG CAO CẤP</h3>
         <a href="https://truongminh3010.github.io/btl/"><button class="btn">ĐẶT PHÒNG</button></a>
       </div>
       <div class="room fade-in" style="animation-delay: 1.25s">
         <img src="https://www.desyloia.com/wp-content/uploads/2022/05/desyloia-hotel-Superior-Balcony-052-1440px-1024x768.jpg" alt="Phòng cao cấp">
-        <h3>PHÒNG THƯỜNG</h3>
+        <h3 class="big-font">PHÒNG THƯỜNG</h3>
         <a href="https://truongminh3010.github.io/btl/" style="animation-delay: 1.25s"><button class="btn">ĐẶT PHÒNG</button></a>
       </div>
       <div class="room fade-in" style="animation-delay: 1.25s">
         <img src="https://www.redrockresort.com/wp-content/uploads/2020/12/RR-Standard-2-Queen.jpg" alt="Phòng tổng thống">
-        <h3>PHÒNG TỔNG THỐNG</h3>
+        <h3 class="big-font">PHÒNG TỔNG THỐNG</h3>
         <a href="https://truongminh3010.github.io/btl/"><button class="btn">ĐẶT PHÒNG</button></a>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <h2 class="big-font" style="font-size:39PX;">NHÀ HÀNG CAO CẤP</h2>
+    <div class="rooms">
+      <div class="room fade-in" style="animation-delay: 1.25s">
+        <img src="https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/809b494f6cb84b33b90cb8b3d4c3ec98.jpeg?width=1000" alt="Phòng thường">
+        <h3 class="big-font">Phở Khôi Hói</h3>
+        <a href="https://hung-qwerty.github.io/monan/"><button class="btn">KHÁM PHÁ NGAY</button></a>
+      </div>
+      <div class="room fade-in" style="animation-delay: 1.25s">
+        <img src="https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/c3985b3e09924519a23c0502bbc6c740.jpeg?width=1000" alt="Phòng cao cấp">
+        <h3 class="big-font">Bánh cuốn bà xuân</h3>
+        <a href="https://hung-qwerty.github.io/monan/" style="animation-delay: 1.25s"><button class="btn">KHÁM PHÁ NGAY</button></a>
+      </div>
+      <div class="room fade-in" style="animation-delay: 1.25s">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/01/c5/a3/pork-in-caramel-sauce.jpg?w=900&h=500&s=1" alt="Phòng tổng thống">
+        <h3 class="big-font">Maison 1929</h3>
+        <a href="https://hung-qwerty.github.io/monan/"><button class="btn">KHÁM PHÁ NGAY</button></a>
       </div>
     </div>
   </section>
   <section class="section services">
     <div class="service">
       <div class="card ">
-        <h3>NHÀ HÀNG CAO CẤP</h3>
-        <p>Là điểm đến lý tưởng dành cho những ai yêu thích ẩm thực chất lượng trong một không gian ấm cúng và tinh tế. Với sứ mệnh mang đến trải 
+        <h3 class="big-font">NHÀ HÀNG CAO CẤP</h3>
+        <p class="font">Là điểm đến lý tưởng dành cho những ai yêu thích ẩm thực chất lượng trong một không gian ấm cúng và tinh tế. Với sứ mệnh mang đến trải 
         nghiệm ẩm thực trọn vẹn, chúng tôi kết hợp giữa hương vị đặc sắc, nguyên liệu tươi ngon và phong cách phục vụ chuyên nghiệp.Thực đơn đa 
         dạng, được chế biến bởi đội ngũ đầu bếp giàu kinh nghiệm, mang đến sự giao thoa hài hòa giữa truyền thống và hiện đại. Dù là một bữa ăn 
         thân mật cùng gia đình, buổi hẹn hò lãng mạn hay tiếp đón đối tác, Nhà hàng của chúng tôi luôn là sự lựa chọn hoàn hảo.Chúng tôi không 
         chỉ phục vụ món ăn – chúng tôi tạo nên những khoảnh khắc đáng nhớ.</p>
-        <a href="https://abcs321.github.io/FOOD/"><button class="btn">Tìm hiểu thêm</button></a>
+        <a href="FOOD/ăn.html"><button class="btn">Tìm hiểu thêm</button></a>
       </div>
     </div>
     <div class="service fade-in" style="animation-delay: 2s">
@@ -482,25 +508,25 @@ footer {
     </div>
     <div class="service">
       <div class="card">
-        <h3>DỊCH VỤ THUÊ XE SANG TRỌNG</h3>
-        <p>LADY HUNTER HOTLEL xin hân hạnh cung cấp dịch vụ cho thuê xe sang trọng, mang đến sự tiện nghi và phong cách tuyệt đối cho hành trình 
+        <h3 class="big-font">DỊCH VỤ THUÊ XE SANG TRỌNG</h3>
+        <p class="font">PENALTY HOTLEL xin hân hạnh cung cấp dịch vụ cho thuê xe sang trọng, mang đến sự tiện nghi và phong cách tuyệt đối cho hành trình 
           của quý vị. Với đội xe đời mới, đa dạng từ sedan lịch lãm đến SUV mạnh mẽ, cùng 
           đội ngũ lái xe chuyên nghiệp, am hiểu lộ trình, chúng tôi cam kết sẽ đáp ứng mọi nhu cầu di chuyển của quý khách, dù là công tác, du 
           lịch hay đơn giản là tận hưởng sự thoải mái trên mọi nẻo đường. Hãy để chúng tôi đồng hành cùng quý vị, kiến tạo những khoảnh khắc đáng 
           nhớ trong suốt thời gian lưu trú tại khách sạn..</p>
-        <a href="https://abcs321.github.io/BTL-CAR/"><button class="btn">Tìm hiểu thêm</button></a>
+        <a href="site xe.html"><button class="btn">Tìm hiểu thêm</button></a>
       </div>
     </div>
   </section>
   <section class="section services">
     <div class="service">
       <div class="card">
-        <h3>CÁC ĐỊA ĐIỂM DU LỊCH ĐƯỢC ƯA CHUỘNG</h3>
-        <p>Lhủ đô quyến rũ này không chỉ là trung tâm chính trị mà còn là kho tàng văn hóa, lịch sử với vô vàn điểm đến hấp dẫn. Từ những con phố 
+        <h3 class="big-font">CÁC ĐỊA ĐIỂM DU LỊCH ĐƯỢC ƯA CHUỘNG</h3>
+        <p class="font">Thủ đô quyến rũ này không chỉ là trung tâm chính trị mà còn là kho tàng văn hóa, lịch sử với vô vàn điểm đến hấp dẫn. Từ những con phố 
           cổ kính rêu phong, những di tích lịch sử uy nghiêm như Văn Miếu - Quốc Tử Giám, Hoàng thành Thăng Long, Lăng Chủ tịch Hồ Chí Minh, đến 
           những hồ nước thơ mộng như Hồ Gươm, Hồ Tây, Hà Nội luôn mang đến những trải nghiệm độc đáo và khó quên cho du khách. Hãy cùng khám phá 
           vẻ đẹp cổ kính, thanh lịch và đầy sức sống của Hà Nội qua những điểm đến mà chúng tôi giới thiệu dưới đây nhé!</p>
-        <a href="https://abcs321.github.io/BTL-MENU/"><button class="btn">Tìm hiểu thêm</button></a>
+        <a href="main menu.html"><button class="btn">Tìm hiểu thêm</button></a>
       </div>
     </div>
     <div class="service fade-in" >
@@ -509,7 +535,7 @@ footer {
   </section>
   <footer>
     <div class="footer-gallery">
-        <h2>Our Gallery</h2>
+        <h2 class="big-font">Our Gallery</h2>
         <div class="gallery-grid">
             <div class="gallery-item gallery-item-1">
                 <img src="https://cdn.thuvienphapluat.vn/uploads/tintuc/2024/01/06/thanh-pho-ha-noi.jpg" alt="Gallery Image 1">
@@ -534,7 +560,7 @@ footer {
     </div>
 
     <div class="footer-contact">
-        <h3>LIÊN HỆ CHĂM SÓC KHÁCH HÀNG</h3>
+        <h3 class="big-font">LIÊN HỆ CHĂM SÓC KHÁCH HÀNG</h3>
         <p>...</p>
         <div class="newsletter-form">
             <label for="email">Đăng ký nhận bản tin của chúng tôi:</label>
@@ -545,43 +571,42 @@ footer {
 
     <div class="footer-links">
         <div class="footer-column">
-            <h4>Về Chúng Tôi</h4>
+            <h4 class="font">Về Chúng Tôi</h4>
             <ul>
-                <li><a href="#">Câu chuyện của chúng tôi</a></li>
-                <li><a href="#">Đội ngũ</a></li>
-                <li><a href="#">Tuyển dụng</a></li>
+                <li><a class="font">Đội ngũ</a></li>
+                <li><a class="font">Tuyển dụng</a></li>
             </ul>
         </div>
         <div class="footer-column">
             <h4>Dịch Vụ</h4>
             <ul>
-                <li><a href="#">Phòng & Suites</a></li>
-                <li><a href="#">Nhà hàng</a></li>
-                <li><a href="#">Spa & Wellness</a></li>
+                <li><a class="font">Phòng & Suites</a></li>
+                <li><a class="font">Nhà hàng</a></li>
+                <li><a class="font">Spa & Wellness</a></li>
             </ul>
         </div>
         <div class="footer-column">
-            <h4>Hỗ Trợ</h4>
+            <h4 class="font">Hỗ Trợ</h4>
             <ul>
-                <li><a href="#">Liên hệ</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Chính sách bảo mật</a></li>
+                <li><a class="font">Liên hệ</a></li>
+                <li><a class="font">FAQ</a></li>
+                <li><a class="font">Chính sách bảo mật</a></li>
             </ul>
         </div>
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2025 THE PENALTY HOTEL. All rights reserved.</p>
+        <p>&copy; 2025 PENALTY HOTEL. All rights reserved.</p>
         <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a class="font"><i class="fab fa-facebook"></i></a>
+            <a class="font"><i class="fab fa-twitter"></i></a>
+            <a class="font"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
 </footer>
 <script>
   function nuke() {
-    alert("test, không có chức năng");
+    alert("BẠN ĐANG Ở TRANG ĐƯỢC CLICK");
   }
   </script>
 </body>
