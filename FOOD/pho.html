@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Phở bò Hà Nội</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.top-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.top-nav ul li {
+    margin-right: 20px;
+}
+.top-nav ul li:last-child {
+    margin-right: 0;
+}
+.top-nav a {
+    text-decoration: none;
+    color: #080707;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+.top-nav a:hover {
+    background-color: rgba(2, 2, 2, 0.1);
+}
+.destination-button a {
+    background-color: #f89406;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.destination-button a:hover {
+    background-color: #e08705;
+}
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background-color: white;
+}
+
+.hero-text {
+    flex: 1 1 50%;
+    padding-right: 20px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.hero-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.hero-image {
+    flex: 1 1 45%;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+.step {
+    margin-bottom: 40px;
+}
+
+.step h3 {
+    color: #333;
+    font-size: 18px;
+}
+
+.step .content {
+    display: block;
+    margin-top: 10px;
+}
+
+.step p {
+    color: #444;
+    line-height: 1.6;
+}
+.step img {
+    width: 100%;
+    max-width: 400px;
+    margin: 5px auto;
+    border-radius: 8px;
+    display: block;
+}
+.step-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header {
+    background-color: rgb(122, 101, 92);
+    color: white;
+    padding: 20px 0;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav li {
+    margin-left: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+.search-box {
+    display: flex;
+}
+.search-box input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+.search-box button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.book-now {
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-options {
+    background-color: #eee;
+    padding: 30px 0;
+    text-align: center;
+}
+.search-options h2 {
+    margin-bottom: 20px;
+}
+.search-options .options button {
+    background-color: #ddd;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-options .options button.active {
+    background-color: #f0ad4e;
+    color: white;
+}
+.services {
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+.services h2 {
+    margin-bottom: 30px;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.services .service-item img {
+    width: 399px;
+    height: 310px;
+    object-fit: cover;
+}
+
+.service-item h3 {
+    padding: 15px;
+    margin: 0;
+    font-size: 1.5em;
+}
+.service-item p {
+    padding: 0 15px 15px;
+    margin: 0;
+    color: #777;
+}
+.learn-more {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px;
+    font-weight: bold;
+}
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-contact {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.contact-info {
+    flex: 1 1 300px;
+}
+.contact-info h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.contact-info p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+.subscribe-form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 70%;
+}
+.subscribe-form button {
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.contact-details i {
+  margin-right: 10px;
+  font-size: 1.1em;
+  color: #f39c12;
+}
+
+.newsletter-form {
+  margin-top: 20px;
+}
+
+.newsletter-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: #333;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.footer-column {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+.footer-column ul li a {
+  color: #eee;
+  text-decoration: none;
+}
+.footer-column ul li a:hover {
+  color: #f39c12;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+    margin-top: 30px;
+}
+
+.ingredients {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.ingredients ul {
+    list-style-type: disc;
+    color: #666;
+    padding-left: 20px;
+    flex: 1;
+}
+
+.ingredients li {
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <ul>
+            <li><a href="https://abcs321.github.io/BTL-MENU/">Home</a></li>
+            <li><a href="https://abcs321.github.io/web-BTL/">Room & Suites</a></li>
+            <li><a href="https://hung-qwerty.github.io/monan/">Restaurant & Bar</a></li>
+        </ul>
+        <div class="destination-button">
+            <a href="https://truongminh3010.github.io/btl/">ĐẶT VÉ</a>
+        </div>
+    </nav>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Cách nấu phở bò Hà Nội chuẩn vị nước dùng ngọt thanh </h1>
+            <p>Phở bò Hà Nội khác biệt so với phở bò ở các nơi khác đó chính là nhờ vào nước dùng trong vắt, có vị ngọt thanh và hương thơm đặc trưng. Khi ăn sẽ chỉ ăn kèm với hành lá, hành tây và rau mùi.</p>
+        </div>
+        <div class="hero-image">
+            <img src="https://cdnv2.tgdd.vn/mwg-static/common/Common/312025%20%281200%20x%20676%20px%29%20%284%29.jpg" alt="Phở bò Hà Nội">
+        </div>
+    </div>
+    <h2>1. Nguyên liệu chính</h2>
+<div class="ingredients">
+    <ul>
+        <li>Xương ống bò: 1kg</li>
+        <li>Xương bò có lẫn thịt: 1kg</li>
+        <li>Bắp bò: 0.8kg</li>
+        <li>Thịt bò: 0.8kg</li>
+        <li>Hành tây: 2 củ</li>
+    </ul>
+    <ul>
+        <li>Gừng: 1 củ</li>
+        <li>Trái thảo: 2 quả</li>
+        <li>Hoa hồi: 10 cái</li>
+        <li>Thanh quế: 1 cái</li>
+        <li>Dụng cụ thực hiện: Nồi luộc, dao, muỗng, đũa, tô, vá, sạn,...</li>
+    </ul>
+</div>
+    <h2>2. Hướng dẫn cách nấu phở bò Hà Nội</h2>
+    <div class="step">
+        <h3>Bước 1: Sơ chế xương bò</h3>
+        <div class="content">
+            <p>Xương bò mua về bạn sẽ đem đi rửa sơ với nước cho sạch bụi bẩn, sau đó, bạn cho xương vào nồi, đổ ngập nước rồi bắc lên bếp, cho thêm khoảng 1/2 muỗng canh muối, 1 muỗng canh giấm và 1 miếng gừng đập giập, đậy nắp đun ở lửa vừa.</p>
+            <p>Khi nước bắt đầu bốc khói thì bạn tắt bếp, tiếp tục đậy nắp và giữ yên trong 10 - 15 phút. Tiếp đến, bạn đổ bỏ phần nước luộc xương đi, rửa sạch nồi và rửa sơ lại các khúc xương, sau đó xếp xương ra rổ cho ráo nước.</p>
+            <img src="https://cdn.tgdd.vn/2025/01/CookRecipe/GalleryStep/so-che-xuong-bo-1.jpg" alt="Sơ chế">
+            </div>
+        </div>
+    </div>
+    <div class="step">
+        <h3>Bước 2: Sơ chế thịt bò tái</h3>
+        <p>Miếng thịt bò dùng làm thịt bò tái sau khi mua về thì bạn hãy đem đi rửa sạch, sau đó dùng giấy ăn thấm cho ráo. Bạn chia nhỏ khối thịt theo chiều thớ dọc, lóc bỏ gân đi. Tiến hành thái thịt thành các lát thật mỏng rồi ướp cùng với 1 nhánh gừng băm nhỏ, 1/2 thìa cà phê muối, 1/2 thìa cà phê bột canh, 1/2 thìa cà phê đường, 1/3 thìa cà phê tiêu xay. Bạn trộn đều thịt cho ngấm gia vị, sau đó cho thịt vào hộp đựng và bảo quản trong ngăn mát tủ lạnh.</p>
+        <img src="https://cdn.tgdd.vn/2025/01/CookRecipe/GalleryStep/so-che-thit-bo-tai-3.jpg" alt="Sơ chế">
+    </div>
+
+    <div class="step">
+        <h3>Bước 3: Ninh xương bò</h3>
+        <p>Bạn lau khô lòng nồi rồi bắc nồi luộc lên bếp, khi nồi nóng thì cho hoa hồi, thảo quả đập vỡ và quế vào, rang ở lửa to cho thơm rồi lấy ra. Bạn cho tiếp hành tây cắt làm 4 và gừng củ cắt đôi vào nướng trên nồi cho cháy xém các mặt, sau đó bạn gắp gừng ra, cho các gia vị đã rang thơm trở vào nồi rồi đổ nước ngập lưng chừng. Bạn xếp bắp bò và xương bò vào nồi, đổ thêm nước để ngập xương. Gừng đã nướng bạn sẽ dùng cán dao đập cho hơi giập rồi thả vào nồi nước, nêm thêm 1 thìa canh muối, 3/4 thìa canh bột canh (hoặc bột ngọt). Khi nước bắt đầu sôi thì bạn tiến hành hớt bọt. Bạn hớt bọt càng sạch thì nước dùng sẽ càng trong. Bạn hạ nhỏ lửa cho nước sôi liu riu và để hầm trong 2 giờ.</p>
+        <img src="https://cdn.tgdd.vn/2025/01/CookRecipe/GalleryStep/ninh-xuong-bo-1.jpg" alt="Ninh xương">
+    </div>
+
+    <div class="step">
+        <h3>Bước 4: Sơ chế thịt bắp bò</h3>
+        <p>Sau 2 giờ ninh thì bạn hãy gắp thịt bắp bò ra, cho vào một chiếc nồi nhỏ, tiếp đến, múc nước dùng cho qua nồi sao cho bắp bò chìm trong nước dùng. Bạn cho cả nồi chứa bắp bò vào một chiếc thao lớn, cho nước vào thao để làm nguội bắp bò. Sau khi thịt bắp bò nguội thì bạn hãy thái thành các lát mỏng vừa ăn.</p>
+        <img src="https://cdn.tgdd.vn/2025/01/CookRecipe/GalleryStep/so-che-thit-bap-bo.jpg" alt="Luộc">
+    </div>
+
+    <div class="step">
+        <h3>Bước 5: Ninh xương lần 2 </h3>
+        <p>Lúc này, bạn hãy vớt hành tây, hoa hồi, quế và thảo quả ra (có thể dùng rây để lọc lại nước dùng), cho phần nước dùng ngâm bắp bò trở lại vào nồi, sau đó châm thêm nước sôi vào đầy nồi và tiến hành ninh thêm 2 - 6 giờ tùy thuộc thời gian của bạn. Ninh càng lâu, chất ngọt từ xương sẽ càng giúp nước dùng ngon ngọt hơn. Sau khi ninh nước dùng xong, bạn sẽ tiến hành nêm nếm gia vị lại cho nước dùng hợp khẩu vị gia đình. Theo đó, với 4 lít nước dùng thì bạn hãy nêm thêm khoảng 3 - 4 thìa canh nước mắm, 1 thìa canh đường, 2 thìa cà phê bột canh.</p>
+        <img src="https://cdn.tgdd.vn/2025/01/CookRecipe/GalleryStep/ninh-xuong-lan-2.jpg" alt="Ninh xương">
+    </div>
+    
+    <div class="step">
+        <h3>Bước 6: Chuẩn bị rau ăn kèm và bánh phở </h3>
+        <p>Phở Hà Nội sẽ thường được ăn cùng với hành lá, ngò gai, ngò rí, húng lủi, húng láng và hành tây. Tùy theo sở thích cá nhân và gia đình mà bạn hãy chuẩn bị rau gia vị cho phù hợp. Bạn sẽ cắt lát mỏng hành tây, các rau gia vị thì thái nhỏ là được. Bánh phở tươi bạn sẽ luộc trong nước sôi 1 - 2 phút, sau đó vớt ra rửa lại với nước lạnh cho sợi phở giữ được độ dai.</p>
+        <img src="https://cdn.tgdd.vn/2025/01/CookRecipe/GalleryStep/chuan-bi-rau-an-kem-va-banh-pho.jpg" alt="Rau và hành">
+    </div>
+
+    <div class="step">
+        <h3>Bước 7: Thưởng thức</h3>
+        <p>Bạn cho bánh phở ra tô, cho thêm một ít thịt bắp bò và vài lát thịt bò tươi vào, cho lên trên chút rau gia vị rồi múc nước dùng đang sôi chan từ từ vào tô phở cho thịt chín tái từ từ. Như vậy là bạn đã hoàn thành một tô phở Hà Nội thơm ngon rồi.</p>
+        <img src="https://cdn.tgdd.vn/2025/01/CookRecipe/GalleryStep/thuong-thuc-13.jpg" alt="Thưởng thức">
+    </div>
+
+    <p><a href="banhcuonThanhTri.html">Xem thêm: Bánh cuốn Thanh Trì</a> | <a href="banhcom.html">Bánh cốm >> </a></p>
+</div>
+<footer class="footer">
+    <div class="footer-contact">
+        <h3>LIÊN HỆ CHĂM SÓC KHÁCH HÀNG</h3>
+        <p>...</p>
+        <div class="newsletter-form">
+            <label for="email">Đăng ký nhận bản tin của chúng tôi:</label>
+            <input type="email" id="email" placeholder="Nhập địa chỉ email của bạn">
+            <button>Đăng ký</button>
+        </div>
+    </div>
+
+    <div class="footer-links">
+        <div class="footer-column">
+            <h4>Về Chúng Tôi</h4>
+            <ul>
+                <li><a href="#">Câu chuyện của chúng tôi</a></li>
+                <li><a href="#">Đội ngũ</a></li>
+                <li><a href="#">Tuyển dụng</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Dịch Vụ</h4>
+            <ul>
+                <li><a href="#">Phòng & Suites</a></li>
+                <li><a href="#">Nhà hàng</a></li>
+                <li><a href="#">Spa & Wellness</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Hỗ Trợ</h4>
+            <ul>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Chính sách bảo mật</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 LADY HUNTER HOTEL. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    </div>
+</footer>
+
+<script>
+    function nuke() {
+      alert("TEST, KO CÓ TÍNH NĂNG");
+    }
+    </script>
+</body>
+</html>

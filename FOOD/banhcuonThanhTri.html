@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bánh Cuốn Thanh Trì</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.top-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.top-nav ul li {
+    margin-right: 20px;
+}
+.top-nav ul li:last-child {
+    margin-right: 0;
+}
+.top-nav a {
+    text-decoration: none;
+    color: #080707;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+.top-nav a:hover {
+    background-color: rgba(2, 2, 2, 0.1);
+}
+.destination-button a {
+    background-color: #f89406;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.destination-button a:hover {
+    background-color: #e08705;
+}
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background-color: white;
+}
+
+.hero-text {
+    flex: 1 1 50%;
+    padding-right: 20px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.hero-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.hero-image {
+    flex: 1 1 45%;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+.step {
+    margin-bottom: 40px;
+}
+
+.step h3 {
+    color: #333;
+    font-size: 18px;
+}
+
+.step .content {
+    display: block;
+    margin-top: 10px;
+}
+
+.step p {
+    color: #444;
+    line-height: 1.6;
+}
+.step img {
+    width: 100%;
+    max-width: 400px;
+    margin: 5px auto;
+    border-radius: 8px;
+    display: block;
+}
+.step-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header {
+    background-color: rgb(122, 101, 92);
+    color: white;
+    padding: 20px 0;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav li {
+    margin-left: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+.search-box {
+    display: flex;
+}
+.search-box input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+.search-box button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.book-now {
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-options {
+    background-color: #eee;
+    padding: 30px 0;
+    text-align: center;
+}
+.search-options h2 {
+    margin-bottom: 20px;
+}
+.search-options .options button {
+    background-color: #ddd;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-options .options button.active {
+    background-color: #f0ad4e;
+    color: white;
+}
+.services {
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+.services h2 {
+    margin-bottom: 30px;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.services .service-item img {
+    width: 399px;
+    height: 310px;
+    object-fit: cover;
+}
+
+.service-item h3 {
+    padding: 15px;
+    margin: 0;
+    font-size: 1.5em;
+}
+.service-item p {
+    padding: 0 15px 15px;
+    margin: 0;
+    color: #777;
+}
+.learn-more {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px;
+    font-weight: bold;
+}
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-contact {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.contact-info {
+    flex: 1 1 300px;
+}
+.contact-info h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.contact-info p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+.subscribe-form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 70%;
+}
+.subscribe-form button {
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.contact-details i {
+  margin-right: 10px;
+  font-size: 1.1em;
+  color: #f39c12;
+}
+
+.newsletter-form {
+  margin-top: 20px;
+}
+
+.newsletter-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: #333;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.footer-column {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+.footer-column ul li a {
+  color: #eee;
+  text-decoration: none;
+}
+.footer-column ul li a:hover {
+  color: #f39c12;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+    margin-top: 30px;
+}
+
+.ingredients {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.ingredients ul {
+    list-style-type: disc;
+    color: #666;
+    padding-left: 20px;
+    flex: 1;
+}
+
+.ingredients li {
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <ul>
+            <li><a href="https://abcs321.github.io/BTL-MENU/">Home</a></li>
+            <li><a href="https://abcs321.github.io/web-BTL/">Room & Suites</a></li>
+            <li><a href="https://hung-qwerty.github.io/monan/">Restaurant & Bar</a></li>
+        </ul>
+        <div class="destination-button">
+            <a href="https://truongminh3010.github.io/btl/">ĐẶT VÉ</a>
+        </div>
+    </nav>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Cách làm bánh cuốn Thanh Trì</h1>
+            <p>Bánh cuốn nóng là một trong những món ăn vô cùng quen thuộc và phổ biến với tất cả các gia đình Việt Nam. Để giúp bạn đổi vị với những bữa sáng bổ dưỡng thì bánh cuốn nóng chính là món ăn sáng được chị em ráo riết tìm cách làm gần đây.</p>
+        </div>
+        <div class="hero-image">
+            <img src="https://minhhouseware.com.vn/wp-content/uploads/2021/09/cach-lam-banh-cuon-tai-nha-600x600.jpg" alt="Bánh Cuốn Thanh Trì">
+        </div>
+    </div>
+    <h2>1. Nguyên liệu chính</h2>
+<div class="ingredients">
+    <ul>
+        <li>Dầu ăn: 4 thìa</li>
+        <li>Bột gạo (bột tẻ): 400 gr</li>
+        <li>Bột năng: 100 gr</li>
+        <li>Thịt nạc băm thả: 500 gr</li>
+    </ul>
+    <ul>
+        <li>Muối: 2 thìa café</li>
+        <li>Dầu ăn: 4 thìa</li>
+        <li>Nấm: 50 gr</li>
+        <li>Hành tím khô: 50 gr</li>
+    </ul>
+    <ul>
+        <li>Gia vị: 5 gr đường, ½ thìa café muối,<br>½ thìa dầu hào, 5 gr tiêu</li>
+        <li>Hành tây băm nhuyễn (để ráo nước): 300 gr</li>
+        <li>Nước ấm: 1,2 lit</li>
+    </ul>
+</div>
+
+    <h2>2. Hướng dẫn cách nấu bánh cuốn Hà Nội</h2>
+    <div class="step">
+        <h3>Bước 1: Phi hành phi và thực hiện nhân</h3>
+        <div class="content">
+            <p>  Hành khô: Bóc vỏ và thái mỏng 200 gr hành khô, rửa qua nước rồi đem hong nắng - gió cho hơi săn lại. Sau đó đổ một lớp thật mỏng bột năng vào trộn với hành, dùng rây để loại bỏ phần bột thừa.Đun sôi khoảng 400ml dầu ăn, cho hành phi vào chiên vàng thơm, vớt để ráo dầu.(Chú ý chiên lửa nhỏ, đến khi hơi vàng thì tắt bếp, không nên chiên đợi đến khi quá vàng, tắt bếp hành sẽ dễ bị cháy)</p>
+            <img src="https://minhhouseware.com.vn/wp-content/uploads/2021/09/lam-banh-cuon-voi-chao-chong-dinh.jpg" alt="Hành phi và nhân bánh">
+            </div>
+        </div>
+    </div>
+    <div class="step">
+        <h3>Bước 2: Cách làm nhân bánh cuốn</h3>
+        <p>Thịt băm ướp các loại gia vị nêm trong 15 phút.Bắc chảo lên bếp, cho 1 muỗng canh dầu ăn, sau đó bạn cho hành tím thái nhỏ phi vàng thơm rồi đổ phần thịt băm vào xào thật săn.Gia vị nêm vào xào sơ, sau đó cho hành tây và nấm mèo vào xào chín tất cả, rồi thêm xác hành phi vào trộn đều trong khoảng một phút.</p>
+        <img src="https://minhhouseware.com.vn/wp-content/uploads/2021/09/cach-lam-nhan-thit-moc-nhi-an-banh-cuon-600x469.jpg" alt="Nhân bánh cuốn">
+    </div>
+
+    <div class="step">
+        <h3>Bước 3: Cách làm vỏ bánh cuốn đơn giản (pha bột)</h3>
+        <p>Với cách làm bánh cuốn bằng bột pha sẵn thì công việc của bạn dễ dàng hơn rất nhiều. Rất đơn giản, bạn pha 1 gói bột bánh cuốn sẵn 400 gr với 1 lít nước. (Lưu ý: khi dùng bột pha sẵn nên pha thừa một ít nước ra để bột đỡ bị đặc. Ví dụ gói bột 400gr yêu cầu 700ml nước thì bạn pha lên thành 1 lít nước).</p>
+        <p>Sau đó, để hỗn hợp bột ngâm khoảng 3 - 4 tiếng. Cứ 2 tiếng lại chắt nước trong ra và thay lượng nước mới sao cho bằng lượng nước vừa chắt. Sau khi ngâm đạt, bạn cho 1 thìa cà phê muối, 1 muỗng canh dầu ăn, trộn đều hỗn hợp bột lên.</p>
+        <img src="https://minhhouseware.com.vn/wp-content/uploads/2021/09/trang-vo-banh-cuon-600x563.jpg" alt="Làm bánh cuốn">
+    </div>
+
+    <div class="step">
+        <h3>Bước 4: Pha nước chấm đặc trưng</h3>
+        <p>Cho 4 thìa café nước mắm, 1 thìa café giấm, 3 thìa café nước sôi, 2 thìa cafe nước cốt chanh, 2 thìa café đường vào bát tô, khuấy đều. Tiếp theo, bạn cho ớt, tỏi băm nhuyễn vào, khuấy đều một lần nữa.</p>
+        <img src="https://minhhouseware.com.vn/wp-content/uploads/2021/09/dung-cu-trang-banh-cuon.png" alt="Nước chấm bánh cuốn">
+    </div>
+
+    <p><a href="pho.html">Phở bò Hà Nội>> </a></p>
+</div>
+<footer class="footer">
+    <div class="footer-contact">
+        <h3>LIÊN HỆ CHĂM SÓC KHÁCH HÀNG</h3>
+        <p>...</p>
+        <div class="newsletter-form">
+            <label for="email">Đăng ký nhận bản tin của chúng tôi:</label>
+            <input type="email" id="email" placeholder="Nhập địa chỉ email của bạn">
+            <button>Đăng ký</button>
+        </div>
+    </div>
+
+    <div class="footer-links">
+        <div class="footer-column">
+            <h4>Về Chúng Tôi</h4>
+            <ul>
+                <li><a href="#">Câu chuyện của chúng tôi</a></li>
+                <li><a href="#">Đội ngũ</a></li>
+                <li><a href="#">Tuyển dụng</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Dịch Vụ</h4>
+            <ul>
+                <li><a href="#">Phòng & Suites</a></li>
+                <li><a href="#">Nhà hàng</a></li>
+                <li><a href="#">Spa & Wellness</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Hỗ Trợ</h4>
+            <ul>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Chính sách bảo mật</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 LADY HUNTER HOTEL. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    </div>
+</footer>
+
+<script>
+    function nuke() {
+      alert("TEST, KO CÓ TÍNH NĂNG");
+    }
+    </script>
+</body>
+</html>

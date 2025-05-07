@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Món Ngon Hà Nội</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+    header {
+      background-color: #330011;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .button {
+      background-color: #8c5c2c;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .hero {
+      width: 100%;
+      background: url('https://framerusercontent.com/images/CvspJIRJjYoUPgJlZuvqZMiYuc.png') no-repeat center center/cover;
+      height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-text {
+      position: absolute;
+      bottom: 250px;
+      left: 50px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .hero-text h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+    .mon-ua-thich {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+    .mon-ua-thich .big {
+      flex: 2;
+    }
+    .mon-ua-thich .big img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .mon-ua-thich .small {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .mon-ua-thich .small .item {
+      display: flex;
+      background: #222;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .mon-ua-thich .small .item img {
+      width: 120px;
+      height: 100%;
+      object-fit: cover;
+    }
+    .mon-ua-thich .small .item .info {
+      padding: 10px;
+    }
+    .tin-an-uong, .lien-he {
+      padding: 40px 20px;
+    }
+    .tin-an-uong h2, .lien-he h2 {
+      margin-bottom: 20px;
+    }
+    .tin-an-uong .cards, .lien-he .info {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .tin-an-uong .card {
+      background: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      width: calc(33% - 20px);
+    }
+    .tin-an-uong .card img {
+      width: 100%;
+    }
+    .tin-an-uong .card .desc {
+      padding: 10px;
+    }
+    .lien-he {
+      display: flex;
+      justify-content: space-between;
+      background: #1e2a31;
+    }
+    .lien-he .info, .lien-he .links {
+      flex: 1;
+    }
+    .lien-he input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    .lien-he .links {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 40px;
+    }
+    .lien-he .links ul {
+      list-style: none;
+      padding: 0;
+    }
+    .lien-he .links li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Room & Suites</a>
+      <a href="#">Restaurant & Bar</a>
+      <a href="#">Blog</a>
+    </nav>
+    <button class="button">Ẩm Thực Hà Nội</button>
+  </header>
+
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Món ngon nổi bật</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat elit sed pretium.</p>
+    </div>
+  </div>
+
+  <div class="mon-ua-thich">
+    <div class="big">
+      <img src="https://framerusercontent.com/images/TI2B49jAYjjw6AOCmRCsZ4wEHyU.png" alt="Bánh cuốn Thanh Trì">
+    </div>
+    <div class="small">
+      <div class="item">
+        <img src="https://framerusercontent.com/images/pceRdy6OVfbZkKnKOKBTXcjRw.png" alt="Bún thang Hà Nội">
+        <div class="info">
+          <small>Ẩm thực</small>
+          <h3>Bún thang Hà Nội</h3>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://framerusercontent.com/images/6fp5HdG3BKAhCWYCr2aR2v6Q6E.png" alt="Phở bò Hà Nội">
+        <div class="info">
+          <small>Ẩm thực</small>
+          <h3>Phở bò Hà Nội</h3>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://framerusercontent.com/images/uCqplRPpdg10nrFZgBvYdV8lO8.png" alt="Bánh cốm">
+        <div class="info">
+          <small>Ẩm thực</small>
+          <h3>Bánh cốm</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tin-an-uong">
+    <h2>Tin ăn uống</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://framerusercontent.com/images/5iZrLgylGshz2qqXL5mpqrxQA.png" alt="Phở gà">
+        <div class="desc">
+          <small>Ẩm thực</small>
+          <h4>15 quán phở ngon Cầu Giấy đậm đà hương vị truyền thống</h4>
+          <p>2 Hours | Author hula hula</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://framerusercontent.com/images/QSjNrRIhZ9ynOTAb8hPIlIF06E.png" alt="Bánh cuốn top 10">
+        <div class="desc">
+          <small>Ẩm thực</small>
+          <h4>Top 10 quán bánh cuốn Thanh Trì Hà Nội nhất định phải ghé</h4>
+          <p>2 Hours | Author hula hula</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://framerusercontent.com/images/VjXo2a2mkS49douK0JgOl3xYC3k.png" alt="Bún thang top 10">
+        <div class="desc">
+          <small>Ẩm thực</small>
+          <h4>Top 10 quán bún thang ngon, nổi tiếng nhất Hà Nội</h4>
+          <p>2 Hours | Author hula hula</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lien-he">
+    <div class="info">
+      <h2>LIÊN HỆ CHĂM SÓC KHÁCH HÀNG</h2>
+      <p>Cảm thấy dịch vụ của chúng tôi không tốt, xin đừng vội đánh giá 1 sao. Hãy liên hệ và báo cho chúng tôi. Cảm ơn quý khách</p>
+      <input type="email" placeholder="Input your email here" />
+    </div>
+    <div class="links">
+      <ul>
+        <li>Home</li>
+        <li>Room & Suites</li>
+        <li>Packages</li>
+        <li>Voucher</li>
+        <li>Promo</li>
+      </ul>
+      <ul>
+        <li>About Us</li>
+        <li>Restaurant & Bar</li>
+        <li>Events</li>
+        <li>Gallery</li>
+      </ul>
+      <ul>
+        <li>Our Team</li>
+        <li>Blog</li>
+        <li>Contact Us</li>
+        <li>Careers</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

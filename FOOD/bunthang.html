@@ -1,0 +1,573 @@
+
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bánh Cuốn Thanh Trì</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.top-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.top-nav ul li {
+    margin-right: 20px;
+}
+.top-nav ul li:last-child {
+    margin-right: 0;
+}
+.top-nav a {
+    text-decoration: none;
+    color: #080707;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+.top-nav a:hover {
+    background-color: rgba(2, 2, 2, 0.1);
+}
+.destination-button a {
+    background-color: #f89406;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.destination-button a:hover {
+    background-color: #e08705;
+}
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background-color: white;
+}
+
+.hero-text {
+    flex: 1 1 50%;
+    padding-right: 20px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.hero-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.hero-image {
+    flex: 1 1 45%;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+.step {
+    margin-bottom: 40px;
+}
+
+.step h3 {
+    color: #333;
+    font-size: 18px;
+}
+
+.step .content {
+    display: block;
+    margin-top: 10px;
+}
+
+.step p {
+    color: #444;
+    line-height: 1.6;
+}
+.step img {
+    width: 100%;
+    max-width: 400px;
+    margin: 5px auto;
+    border-radius: 8px;
+    display: block;
+}
+.step-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header {
+    background-color: rgb(122, 101, 92);
+    color: white;
+    padding: 20px 0;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav li {
+    margin-left: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+.search-box {
+    display: flex;
+}
+.search-box input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+.search-box button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.book-now {
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-options {
+    background-color: #eee;
+    padding: 30px 0;
+    text-align: center;
+}
+.search-options h2 {
+    margin-bottom: 20px;
+}
+.search-options .options button {
+    background-color: #ddd;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-options .options button.active {
+    background-color: #f0ad4e;
+    color: white;
+}
+.services {
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+.services h2 {
+    margin-bottom: 30px;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.services .service-item img {
+    width: 399px;
+    height: 310px;
+    object-fit: cover;
+}
+
+.service-item h3 {
+    padding: 15px;
+    margin: 0;
+    font-size: 1.5em;
+}
+.service-item p {
+    padding: 0 15px 15px;
+    margin: 0;
+    color: #777;
+}
+.learn-more {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px;
+    font-weight: bold;
+}
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-contact {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.contact-info {
+    flex: 1 1 300px;
+}
+.contact-info h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.contact-info p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+.subscribe-form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 70%;
+}
+.subscribe-form button {
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.contact-details i {
+  margin-right: 10px;
+  font-size: 1.1em;
+  color: #f39c12;
+}
+
+.newsletter-form {
+  margin-top: 20px;
+}
+
+.newsletter-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: #333;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.footer-column {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+.footer-column ul li a {
+  color: #eee;
+  text-decoration: none;
+}
+.footer-column ul li a:hover {
+  color: #f39c12;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+    margin-top: 30px;
+}
+
+.ingredients {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.ingredients ul {
+    list-style-type: disc;
+    color: #666;
+    padding-left: 20px;
+    flex: 1;
+}
+
+.ingredients li {
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <ul>
+            <li><a href="https://abcs321.github.io/BTL-MENU/">Home</a></li>
+            <li><a href="https://abcs321.github.io/web-BTL/">Room & Suites</a></li>
+            <li><a href="https://hung-qwerty.github.io/monan/">Restaurant & Bar</a></li>
+        </ul>
+        <div class="destination-button">
+            <a href="https://truongminh3010.github.io/btl/">ĐẶT VÉ</a>
+        </div>
+    </nav>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Hướng dẫn cách làm bún thang Hà Nội chuẩn vị, cực đơn giản</h1>
+            <p>Bún thang - một trong những nét đặc sắc trong ẩm thực của người Hà Nội. Tuy là món ăn đơn giản nhưng để chế biến được Bún Thang ngon, chuẩn vị lại rất kỳ công, đòi hỏi sự tỉ mỉ và khéo léo. Làm sao để có được bát Bún Thang không chỉ ngon, nước dùng trong vắt, đậm đà, ngọt thanh mà cách bày biện cũng cần đẹp mắt, hấp dẫn. Hãy cùng Vào bếp với Mediamart để học cách làm món Bún Thang bạn nhé</p>
+        </div>
+        <div class="hero-image">
+            <img src="https://cdn.mediamart.vn/images/news/hung-dn-cach-lam-bun-thang-ha-ni-chun-v-cc-don-gin_0bb203d0.webp" alt="Bánh Cuốn Thanh Trì">
+        </div>
+    </div>
+    <h2>1. Nguyên liệu chính</h2>
+<div class="ingredients">
+    <ul>
+        <li>Gà ta: 1 con </li>
+        <li>Xương ống: 500g </li>
+        <li> Tôm he khô: 100g </li>
+        <li> Mực khô: 1 con ( có thể thay bằng sá sùng) </li>
+        <li>Củ cải khô: 100g</li>
+    </ul>
+    <ul>
+        <li>Trứng gà: 3 quả </li>
+        <li>Nấm hương: 10 cái </li>
+        <li> Rau răm: 1 mớ</li>
+        <li>Mắm tôm: 1 chén con </li>
+        <li>Giò lụa: 200g </li>
+    </ul>
+    <ul>
+        <li>Tinh dầu cà cuống (không có bỏ qua).</li>
+        <li>Hành khô: 3 củ </li>
+        <li>Hành lá </li>
+        <li>Gừng tươi: 1 củ </li>
+        <li>Bún rối.</li>
+        <li>Gia vị: nước mắm, muối, hạt nêm, bột canh tôm, giấm, đường cát trắng</li>
+    </ul>
+</div>
+
+    <h2>2. Hướng dẫn cách nấu bún thang Hà Nội</h2>
+    <div class="step">
+        <h3>Bước 1: Sơ chế các loại rau củ </h3>
+        <div class="content">
+            <p>  Hành lá, mùi tàu, rau răm đem nhặt rồi rửa sạch với nước và để ráo rồi đem thái nhỏ, để riêng. 
+
+                Nấm khô nhặt sạch, ngâm nở sau đó cắt bỏ chân và cắt nhỏ. Để lại 3 chiếc nấm hương để cho vào nước dùng ninh cho dậy mùi 
+                
+                Gừng và hành khô đã rửa sạch đem nướng cho đến khi nào chín và có mùi thơm.</p>
+            <img src="https://mediamart.vn/images/uploads/2022/c09a379a-f464-4c53-a070-b0f50acbdb1f.jpg" alt="rau củ">
+            </div>
+        </div>
+    </div>
+    <div class="step">
+        <h3>Bước 2: Sơ chế mực và tôm khô </h3>
+        <p>Mực khô đem nướng chín sau đó giã hơi dập. Tôm he khô tách riêng đầu và vỏ tôm để nướng thơm bằng lò vi sóng, sau đó đem giã hơi dập.  Phần thịt tôm ngâm nước ấm nở, vắt khô</p>
+        <img src="https://mediamart.vn/images/uploads/2022/1f330935-13a4-4e19-bf59-e23def7ad746.jpg" alt="mực">
+    </div>
+
+    <div class="step">
+        <h3>Bước 3: Sơ chế gà </h3>
+        <p>Gà ta vặt sạch lông, sau đó đem xát muối toàn bộ gà để khử mùi hôi. Tiếp đó bạn rửa lại gà với nước và để ráo.</p>
+        <p>Đem luộc chín gà sau đó nhanh tay thả vào chậu nước đá ngâm cho da gà giòn. Gà vớt ra để nguội, lọc xương, lấy phần lườn gà xé sợi nhỏ, phần da gà thái sợi nhỏ như bún.</p>
+        <img src="https://mediamart.vn/images/uploads/2022/dbab4399-bc53-4063-a3c2-69f75d28928d.jpg" alt="gà">
+    </div>
+
+    <div class="step">
+        <h3>Bước 4: Nấu nước dùng </h3>
+        <p> Xương lợn rửa sạch và đem chần qua nước sôi để khử mùi hôi cho nước dùng. Sau đó bạn cho phần xương lợn vào nước luộc gà để ninh khoảng 1 tiếng trong nồi ấp suất điện</p>
+        <img src="https://mediamart.vn/images/uploads/2022/383ae339-6f40-4269-80de-45ab81a40bb2.jpg" alt="Nước">
+        <p>Khi ninh được 1 tiếng, bạn cho phần tôm he khô, mực khô đã nướng vào trong túi lọc và thả vào nước dùng. Thêm hành khô, gừng đã nướng sơ, 3 cái nấm hương vào ninh tiếp 1 tiếng nữa. Khi nước dùng đã ninh gần đủ thời gian, bạn cho 1 thìa hạt nêm, 1 thìa đường, 2 thìa bột canh tôm và 1 thìa nước mắm. Bạn nên nêm nếm nhạt hơn khẩu vị để khi ăn cho mắm tôm vào bát không bị mặn. </p>
+    </div>
+    <div class="step">
+        <h3>Bước 5: Sơ chế các củ cải khô </h3>
+        <p> Củ cải khô cắt thành khúc vừa ăn. Sau đó đem ngâm nở củ cải khô trong nước ấm khoảng 30 phút rồi đem rửa sạch. Củ cải sau khi rửa bạn vắt bớt nước và đem trộn với 2 thìa dấm, 1 thìa đường trắng, 1 thìa nước mắm, tương ớt ( hoặc ớt tươi) để ngâm 30 phút để củ cải thấm đều gia vị </p>
+        <img src="https://mediamart.vn/images/uploads/2022/07333198-56b1-4bff-b1e0-26a5885b4df6.jpg" alt="củ cải">
+    </div>
+    <div class="step">
+        <h3>Bước 6: Làm ruốc tôm  </h3>
+        <p> Phần tôm he khô sau khi ngâm nước, vắt khô đem lên chảo rang cho tôm vàng mặt, săn lại. Giã phần cháy tôm này thật bông để làm thành ruốc tôm. </p>
+        <img src="https://mediamart.vn/images/uploads/2022/942180ca-fdf8-4a09-814a-9cf6b4c8317c.jpg" alt="ruốc">
+    </div>
+    <div class="step">
+        <h3>Bước 7: Tráng trứng  </h3>
+        <p> Đánh tan 2 quả trứng gà và 1 lòng đỏ trứng gà với 1 thìa cơm rượu trắng, 1 thìa nước lọc.  </p>
+        <p>Để trứng tráng được mỏng, bạn nên cho 1 chút dầu ăn lên chảo sau đó dùng giấy thấm dầu quét nhẹ một lớp mỏng để chảo có thật ít dầu ăn. Sau đó bạn cho 1 thìa trứng vào chảo, láng thật mỏng và rán ở mức lửa nhỏ. Làm lần lượt cho tới khi rán hết trứng. Tiếp đó, xếp các lớp trứng lên nhau, cuộn tròn và thái chỉ thật nhỏ. </p>
+        <img src="https://mediamart.vn/images/uploads/2022/52b92dca-4273-48c4-8407-ac0f5221d0f1.jpg" alt="trứng">
+    </div>
+    <div class="step">
+        <h3>Bước 8: Thái giò lụa và chần bún</h3>
+        <p>Giò lụa bạn cũng đem thái chỉ thật mỏng và để riêng. Bún rối đem trụng qua với nước sôi. </p>
+        <img src="https://mediamart.vn/images/uploads/2022/364caded-505c-49fc-8c9d-76bc08538e91.jpg" alt="giò">
+    </div>
+    <div class="step">
+        <h3>Bước 9: Hoàn thành   </h3>
+        <p> Cho bún ra bát, sau đó xếp các loại nhân: trứng, gà xé, giò lụa thái chỉ, nấm hương thái nhỏ, hành lá, rau răm, mùi tàu. </p>
+        <img src="https://mediamart.vn/images/uploads/2022/a9e28dc6-943f-4d28-806f-2d8d20889862.jpg" alt="trứng">
+        <p>https://mediamart.vn/images/uploads/2022/a9e28dc6-943f-4d28-806f-2d8d20889862.jpg</p>
+    </div>
+    <h2>3. Thành phẩm</h2>
+    <p>Bát bún thang sau khi hoàn thành có nước dùng trong vắt, ngọt thanh, dậy mùi thơm của tôm he khô. Bát bún thang hấp dẫn bởi màu vàng của trứng tráng mỏng thái chỉ tơ, phớt hồng của giò lụa, màu trắng của thịt lườn và màu vàng của da gà.</p>
+    <img src="https://mediamart.vn/images/uploads/2022/39142f10-c4aa-4fe0-8ade-95c6e6f2fea0.jpg" alt="trứng">
+    <p>Bún thang cầu kỳ không chỉ từ nguyên liệu, cách nấu, cách bày trí mà còn ở cách ăn. Bún thang ngon nhất khi ăn nóng, khi ăn có thể cho thêm mắm tôm để dậy mùi. Bún thang ăn kèm cùng củ cải khô ngâm chua ngọt càng làm cho món ăn này trở nên hấp dẫn một cách lạ kỳ </p>
+    <p><a href="banhcom.html">Bánh cốm</a>|<a href="banhcuonThanhTri.html">Bánh cuốn Thanh Trì>> </a></p>
+</div>
+<footer class="footer">
+    <div class="footer-contact">
+        <h3>LIÊN HỆ CHĂM SÓC KHÁCH HÀNG</h3>
+        <p>...</p>
+        <div class="newsletter-form">
+            <label for="email">Đăng ký nhận bản tin của chúng tôi:</label>
+            <input type="email" id="email" placeholder="Nhập địa chỉ email của bạn">
+            <button>Đăng ký</button>
+        </div>
+    </div>
+
+    <div class="footer-links">
+        <div class="footer-column">
+            <h4>Về Chúng Tôi</h4>
+            <ul>
+                <li><a href="#">Câu chuyện của chúng tôi</a></li>
+                <li><a href="#">Đội ngũ</a></li>
+                <li><a href="#">Tuyển dụng</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Dịch Vụ</h4>
+            <ul>
+                <li><a href="#">Phòng & Suites</a></li>
+                <li><a href="#">Nhà hàng</a></li>
+                <li><a href="#">Spa & Wellness</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Hỗ Trợ</h4>
+            <ul>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Chính sách bảo mật</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 LADY HUNTER HOTEL. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    </div>
+</footer>
+
+<script>
+    function nuke() {
+      alert("TEST, KO CÓ TÍNH NĂNG");
+    }
+    </script>
+</body>
+</html>

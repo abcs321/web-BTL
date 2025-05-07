@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du lịch Hà Nội</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+.main-header {
+    background-image: url('https://cellphones.com.vn/sforum/wp-content/uploads/2024/01/dia-diem-du-lich-o-ha-noi-1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.top-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.top-nav ul li {
+    margin-right: 20px;
+}
+.top-nav ul li:last-child {
+    margin-right: 0;
+}
+.top-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.top-nav a:hover {
+    background-color: rgba(66, 53, 53, 0.1);
+}
+.destination-button a {
+    background-color: #f89406;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.destination-button a:hover {
+    background-color: #e08705;
+}
+.hero-section {
+    text-align: left;
+    padding: 80px 20px;
+}
+.hero-title {
+    font-size: 4em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.sub-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.sub-title {
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.sub-description {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+.must-visit {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.must-visit h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.must-visit-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.must-visit-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: calc(33% - 20px);
+    text-align: left;
+}
+
+.must-visit-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.must-visit-item h3 {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.must-visit-item p {
+    margin: 10px;
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.4;
+}
+@media (max-width: 768px) {
+    .must-visit-item {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 576px) {
+    .must-visit-item {
+        width: 100%;
+    }
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.card-image {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+.card-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.card-content {
+    padding: 15px;
+}
+.card-content h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+    color: #333;
+}
+.card-content p {
+    margin-bottom: 0;
+    color: #666;
+    font-size: 0.9em;
+}
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .card {
+        flex-direction: row;
+        align-items: center;
+    }
+    .card-image {
+        flex: 1;
+        max-width: 50%;
+    }
+    .card-content {
+        flex: 1;
+        padding: 15px;
+    }
+    .card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .card:nth-child(even) .card-content {
+        text-align: right;
+    }
+}
+.p {
+  font-size: 104px;
+}
+.footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 40px 20px;
+  font-size: 0.9em;
+}
+
+.footer-contact {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.footer-contact h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.footer-contact p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.contact-details i {
+  margin-right: 10px;
+  font-size: 1.1em;
+  color: #f39c12;
+}
+
+.newsletter-form {
+  margin-top: 20px;
+}
+
+.newsletter-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: #333;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.footer-column {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+.footer-column ul li a {
+  color: #eee;
+  text-decoration: none;
+}
+.footer-column ul li a:hover {
+  color: #f39c12;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.slide-in-right {
+  animation: slideInFromRight 1.25s ease-out forwards;
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 1.25s ease-out forwards;
+}
+
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="top-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://truongminh3010.github.io/btl/">Room & Suites</a></li>
+                <li><a href="https://hung-qwerty.github.io/monan/">Restaurant & Bar</a></li>
+            </ul>
+            <div class="destination-button">
+                <a href="https://truongminh3010.github.io/btl/">ĐẶT VÉ</a>
+            </div>
+        </nav>
+        <div class="hero-section">
+            <h1 class="hero-title">Du lịch Hà Nội</h1>
+            <div class="sub-section">
+                <h2 class="sub-title">ĐỊA ĐIỂM DU LỊCH</h2>
+                <p class="sub-description">Với những địa điểm vô cùng thu hút khách du lịch.</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        </main>
+        <div class="container">
+            <div class="card">
+                <div class="card-image slide-in-left">
+                    <img src="https://36pho.com/thumbnail/upload/2023/05/04/pho-co-ha-noi-01-2-1.jpg?w=768&h=768&cr=1" alt="Phố cổ Hà Nội">
+                </div>
+                <div class="card-content">
+                    <h2>Phố cổ Hà Nội</h2>
+                    <p>Khu phố cổ Hà Nội là tên gọi thông thường của một khu vực đô thị có từ lâu đời của Hà Nội nằm ở ngoài hoàng thành Thăng Long
+                    Khu đô thị này tập trung dân cư hoạt động tiểu thủ công nghiệp và buôn bán giao thương, hình thành lên những phố nghề đặc trưng, mang những nét
+                    truyền thống riêng biệt của cư dân thành thị, kinh đô. Ngày nay khu phố cổ Hà Nội là điểm đến hấp dẫn cho những ai muốn tìm hiểu về Thăng Long 
+                    -Đông Đô - Hà Nội.
+                    Khu "Hà Nội 36 phố phường" là một cách gọi không chính xác của khu phố cổ, vì 36 phố phường là một cách gọi ước lệ khu vực đô thị cổ, 
+                    nằm bên trong và bên ngoài cả khu phố cổ.</p>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="card-image slide-in-right" style="animation-delay: 1s">
+                    <img src="https://cdn.xanhsm.com/2024/11/e8c89da9-lang-chu-tich-ho-chi-minh-1.jpg" alt="Lăng Chủ tịch Hồ Chí Minh">
+                </div>
+                <div class="card-content">
+                    <h2>Lăng Chủ tịch Hồ Chí Minh</h2>
+                    <p>Lăng Chủ tịch Hồ Chí Minh, còn gọi là Lăng Hồ Chủ tịch, Lăng Bác, là nơi gìn giữ thi hài Chủ tịch Hồ Chí Minh. Lăng được 
+                    chính thức khởi công ngày 2 tháng 9 năm 1973, tại vị trí lễ đài cũ giữa Quảng trường Ba Đình, nơi Chủ tịch Hồ Chí Minh từng 
+                    chủ trì các cuộc gặp mặt quan trọng.</p>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="card-image slide-in-left" style="animation-delay: 1.25s">
+                    <img src="https://image-tc.galaxy.tf/wipng-daexn19ej5lhhexs5yjcrc003/vietnam-trip-1.png" alt="Hồ Hoàn Kiếm">
+                </div>
+                <div class="card-content">
+                    <h2>Hồ Hoàn Kiếm</h2>
+                    <p>Hồ Hoàn Kiếm còn được gọi là Hồ Gươm là một hồ nước ngọt tự nhiên nằm ở quận Hoàn Kiếm, trung tâm thành phố Hà Nội. Hồ có 
+                    diện tích khoảng 12 ha. Trước kia, hồ còn có các tên gọi là hồ Lục Thủy (vì nước có màu xanh quanh năm), hồ Thủy Quân (dùng để 
+                    duyệt thủy binh), hồ Tả Vọng và Hữu Vọng (trong thời Lê mạt). Tên gọi Hoàn Kiếm xuất hiện vào đầu thế kỷ 15 gắn với truyền 
+                    thuyết vua Lê Lợi trả lại gươm thần cho Rùa thần. Theo truyền thuyết, trong một lần vua Lê Thái Tổ dạo chơi trên thuyền, bỗng 
+                    một con rùa vàng nổi lên mặt nước đòi nhà vua trả thanh gươm mà Long Vương cho mượn để đánh đuổi quân Minh xâm lược. Nhà vua 
+                    liền trả gươm cho rùa thần và rùa lặn xuống nước biến mất. Từ đó hồ được lấy tên là hồ Hoàn Kiếm. Tên hồ còn được lấy để đặt 
+                    cho một quận trung tâm của Hà Nội (quận Hoàn Kiếm) và là hồ nước duy nhất của quận này cho đến ngày nay.</p>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="card-image slide-in-right" style="animation-delay: 1.65s">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Hanoi_Temple_of_Literature_%28cropped%29.jpg/1200px-Hanoi_Temple_of_Literature_%28cropped%29.jpg" alt="Văn Miếu Quốc Tử Giám">
+                </div>
+                <div class="card-content">
+                    <h2>Văn Miếu Quốc Tử Giám</h2>
+                    <p>Văn Miếu Quốc Tử Giám là quần thể di tích đa dạng, phong phú hàng đầu của thành phố Hà Nội, nằm ở phía Nam kinh thành 
+                        Thăng Long. Quần thể kiến trúc Văn Miếu Quốc Tử Giám bao gồm: hồ Văn, khu Văn Miếu Quốc Tử Giám và vườn Giám, mà kiến trúc 
+                        chủ thể là Văn miếu (chữ Hán: 文廟) - nơi thờ Khổng Tử, và Quốc tử giám (chữ Hán: 國子監) - trường đại học đầu tiên của Việt 
+                        Nam. Khu Văn Miếu – Quốc Tử Giám có tường gạch vồ bao quanh, phía trong chia thành 5 lớp không gian với các kiến trúc khác 
+                        nhau. Mỗi lớp không gian đó được giới hạn bởi các tường gạch có 3 cửa để thông với nhau (gồm cửa chính giữa và hai cửa phụ
+                        hai bên). Từ ngoài vào trong có các cổng lần lượt là: cổng Văn Miếu, Đại Trung, Khuê Văn các, Đại Thành và cổng Thái Học.Với 
+                        hơn 700 năm hoạt động đã đào tạo hàng nghìn nhân tài cho đất nước. Ngày nay, Văn Miếu Quốc Tử Giám là nơi tham quan của du 
+                        khách trong và ngoài nước đồng thời cũng là nơi khen tặng cho học sinh xuất sắc và còn là nơi tổ chức hội thơ hàng năm vào ngày rằm tháng giêng. Đặc biệt, đây còn là nơi các sĩ tử ngày nay đến "cầu may" trước mỗi kỳ thi quan trọng.</p>
+                </div>
+            </div>
+    
+            </div>
+    
+        </section>
+        <section class="must-visit">
+            <h2>ẨM TH</h2>
+            <div class="must-visit-list">
+                <div class="must-visit-item">
+                    <a href="FOOD/banhcom.html"><img src="https://framerusercontent.com/images/uCqplRPpdg10nrFZgBvYdV8lO8.png" alt="Địa điểm 1"></a>
+                    <h3>BÁNH CỐM</h3>
+                <P>Địa chỉ: Số 60 Hàng Than, Q. Ba Đình, Hà Nội</P>
+                </div>
+                <div class="must-visit-item">
+                    <a href="FOOD/pho.html"><img src="https://framerusercontent.com/images/5iZrLgylGshz2qqXL5mpqrxQA.png" alt="Địa điểm 2"></a>
+                    <h3>PHỞ HÀ NỘI</h3>
+                    <p>Địa chỉ: 4 Hàng Nón, Quận Hoàn Kiếm, Hà Nội</p>
+                </div>
+                <div class="must-visit-item">
+                    <a href="FOOD/bunthang.html"><img src="https://framerusercontent.com/images/VjXo2a2mkS49douK0JgOl3xYC3k.png" alt="Địa điểm 3"></a>
+                    <h3> BÚN THANG</h3>
+                    <P>Địa chỉ: Số 60 Hàng Than, Q. Ba Đình, Hà Nội</P>
+                </div>
+                </div>
+        </section>
+        <footer class="footer">
+            <div class="footer-contact">
+                <h3>LIÊN HỆ CHĂM SÓC KHÁCH HÀNG</h3>
+                <p>...</p>
+                <div class="newsletter-form">
+                    <label for="email">Đăng ký nhận bản tin của chúng tôi:</label>
+                    <input type="email" id="email" placeholder="Nhập địa chỉ email của bạn">
+                    <button>Đăng ký</button>
+                </div>
+            </div>
+        
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Về Chúng Tôi</h4>
+                    <ul>
+                        <li><a href="#">Câu chuyện của chúng tôi</a></li>
+                        <li><a href="#">Đội ngũ</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Dịch Vụ</h4>
+                    <ul>
+                        <li><a href="https://truongminh3010.github.io/btl/">Phòng & Suites</a></li>
+                        <li><a href="FOOD/ăn.html">Nhà hàng</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="footer-bottom">
+                <p>&copy; 2025 PENALTY HOTEL. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            </div>
+        </footer>
+    
+    </body>
+</html>
