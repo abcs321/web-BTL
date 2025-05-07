@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hanoi Hotels</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        background-color: #f8f8f8;
+      }
+      header {
+        background-color: #5c5248;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 2em;
+      }
+      header nav a {
+        color: white;
+        margin: 0 1em;
+        text-decoration: none;
+      }
+      header button {
+        background-color: #f6b100;
+        border: none;
+        padding: 0.5em 1em;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      .hero {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/98/Capella_Hanoi_Hotel.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 5em 2em;
+        text-align: center;
+        position: relative;
+      }
+      .hero h1 {
+        font-size: 3em;
+        margin-bottom: 0.5em;
+      }
+      .filters {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        padding: 2em 4em;
+        background-color: white;
+        margin-top: -30px;
+        position: relative;
+      }
+      .filters input,
+      .filters select {
+        padding: 1em;
+        font-size: 0.95em;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        width: 220px;
+        outline: none;
+        background-color: #fafafa;
+      }
+      .cards {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        padding: 2em;
+        flex-wrap: wrap;
+      }
+      .card {
+        background-color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        border-radius: 16px;
+        width: 300px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+      .card:hover {
+        border-color: #007bff;
+        transform: translateY(-5px);
+      }
+      .card.selected {
+        border: 2px dashed #00aaff;
+      }
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+      }
+      .card-content {
+        padding: 1.2em;
+      }
+      .card-content h3 {
+        margin: 0 0 0.5em;
+        color: #007bff;
+        font-size: 1.1em;
+      }
+      .card-content p {
+        margin: 0.5em 0 1em;
+        color: #333;
+        font-size: 0.95em;
+      }
+      .card-content a {
+        background-color: #1b1f23;
+        color: white;
+        padding: 0.5em 1em;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 0.9em;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      footer {
+        background-color: #1b1f23;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        padding: 2em;
+        flex-wrap: wrap;
+      }
+      footer input {
+        padding: 0.5em;
+        width: 100%;
+        max-width: 300px;
+        margin-top: 1em;
+      }
+      .hero {
+    background-image: url('https://theluxuryeditor.com/wp-content/uploads/2023/08/178793622.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.hero-content {
+    max-width: 800px;
+    text-align: left;
+}
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+.hero-button {
+    font-size: 1.2em;
+    padding: 15px 30px;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="#">Room & Suites</a>
+          <a href="FOOD/ăn.html">Restaurants & Bar</a>
+        </nav>
+      </div>
+      <button><a href="https://truongminh3010.github.io/btl/">BOOK TOUR</a></button>
+    </header>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Hanoi Hotels</h1>
+        <p>
+          Khách sạn cung cấp không gian nghỉ dưỡng tiện nghi, hiện đại với dịch vụ chuyên nghiệp và thân thiện.
+          Tọa lạc tại vị trí thuận lợi, khách sạn là điểm dừng chân lý tưởng cho du khách trong các chuyến công tác hay kỳ nghỉ thư giãn.
+        </p>
+      </div>
+    </section>
+
+    <section class="filters">
+      <input type="text" placeholder="Search activities or Destinations" />
+      <select>
+        <option>Premium</option>
+      </select>
+      <select>
+        <option>2 Adult</option>
+      </select>
+      <select>
+        <option>All</option>
+      </select>
+    </section>
+
+    <section class="cards">
+      <div class="card selected">
+        <img src="https://i.postimg.cc/t4LpNbpM/cape.jpg" alt="Capella Hanoi" />
+        <div class="card-content">
+          <h3>Capella Hanoi</h3>
+          <p>11 Lê Phụng Hiểu, Hanoi, Vietnam</p>
+          <a href="https://guide.michelin.com/vn/en/hotels-stays/hanoi/capella-hanoi-12368?hotelId=12368&q=Hanoi%2C%20Ho%C3%A0n%20Ki%E1%BA%BFm%2C%20Vietnam&arr=2025-06-04&dep=2025-06-05&nA=1&nC=0&nR=1" target="_blank">
+            Read More</a
+          >
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://i.postimg.cc/BbDV3rdX/de.png" alt="Hotel de Lagom" />
+        <div class="card-content">
+          <h3>Hotel de Lagom</h3>
+          <p>30b Phố Lý Nam Đế, Hanoi, Vietnam</p>
+          <a
+            href="https://guide.michelin.com/vn/en/hotels-stays/hanoi/hotel-de-lagom-14798?hotelId=14798&q=Hanoi%2C%20Ho%C3%A0n%20Ki%E1%BA%BFm%2C%20Vietnam&arr=2025-06-04&dep=2025-06-05&nA=1&nC=0&nR=1"
+            target="_blank"
+            >Read More</a
+          >
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://i.postimg.cc/1RK23QTZ/metro.jpg"
+          alt="Sofitel Legend Metropole Hanoi"
+        />
+        <div class="card-content">
+          <h3>Sofitel Legend Metropole Hanoi</h3>
+          <p>15 Ngo Quyen Street, Hanoi, Vietnam</p>
+          <a
+            href="https://guide.michelin.com/vn/en/hotels-stays/hanoi/sofitel-legend-metropole-hanoi-6098?hotelId=6098&q=Hanoi%2C%20Ho%C3%A0n%20Ki%E1%BA%BFm%2C%20Vietnam&arr=2025-06-04&dep=2025-06-05&nA=1&nC=0&nR=1"
+            target="_blank"
+            >Read More</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <h2>LIÊN HỆ CHĂM SÓC KHÁCH HÀNG</h2>
+        <p>
+          Cần được giúp đỡ hoặc có điều gì thắc mắc, xin đừng ngần ngại liên hệ
+          với chúng tôi.
+        </p>
+        <input type="email" placeholder="Input your email here" />
+      </div>
+      <div>
+        <p>Room & Suites<br />Packages<br />Voucher<br />Promo</p>
+      </div>
+      <div>
+        <p>About Us<br />Events<br />Gallery</p>
+      </div>
+      <div>
+        <p>Our Team<br />Blog<br />Contact Us</p>
+      </div>
+    </footer>
+  </body>
+</html>
